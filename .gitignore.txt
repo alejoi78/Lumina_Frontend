@@ -1,0 +1,48 @@
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Mac files
+.DS_Store
+
+# Node modules (if you use JS interop with npm)
+node_modules/
+
+# Logs
+*.log
+
+# JetBrains Rider
+.idea/
+
+# VS Code settings
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# dotnet-generated files
+wwwroot/css/app.bundle.css
+wwwroot/js/app.bundle.js
+
+# Blazor cache
+**/Client/wwwroot/_framework/
+**/Client/obj/
+
+# Others (optional depending on your setup)
+*.db
+*.sqlite
+*.db-shm
+*.db-wal

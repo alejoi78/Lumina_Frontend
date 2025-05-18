@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\BlazorWeb\\BlazorWeb.csproj": {}
+    "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\BlazorWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\BlazorWeb\\BlazorWeb.csproj": {
+    "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\BlazorWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\BlazorWeb\\BlazorWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\BlazorWeb.csproj",
         "projectName": "BlazorWeb",
-        "projectPath": "C:\\Users\\user\\source\\repos\\BlazorWeb\\BlazorWeb.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\BlazorWeb\\obj\\",
+        "projectPath": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\BlazorWeb.csproj",
+        "packagesPath": "C:\\Users\\Alejo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alejo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -70,13 +70,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.12, )",
+              "version": "[8.0.13, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.1, )",
+              "version": "[9.0.2, )",
               "autoReferenced": true
             }
           },
@@ -94,7 +94,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.12, 8.0.12]"
+              "version": "[8.0.13, 8.0.13]"
             }
           ],
           "frameworkReferences": {
@@ -102,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
