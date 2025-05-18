@@ -1,0 +1,93 @@
+﻿@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject PeliculaNegocio PeliculaServicio
+@inject NavigationManager NavigationManager
+
+<h1>Nueva Película</h1>
+
+<EditForm Model="@nuevaPelicula" OnValidSubmit="@guardarPeliculas">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <div>
+            <label for="titulo">Título: </label>
+            <InputText id="titulo" @bind-Value="nuevaPelicula.Titulo" class="form-control" />
+            <ValidationMessage For="@(() => nuevaPelicula.Titulo)" />
+        </div>
+
+        <div>
+            <label for="director">Director: </label>
+            <InputText id="director" @bind-Value="nuevaPelicula.Director" class="form-control" />
+            <ValidationMessage For="@(() => nuevaPelicula.Director)" />
+        </div>
+
+        <div>
+            <label for="anio">Año: </label>
+            <InputNumber id="anio" @bind-Value="nuevaPelicula.Anio" class="form-control" />
+            <ValidationMessage For="@(() => nuevaPelicula.Anio)" />
+        </div>
+
+        <div>
+            <label for="link">Enlace (Link): </label>
+            <InputText id="link" @bind-Value="nuevaPelicula.Link" class="form-control" />
+            <ValidationMessage For="@(() => nuevaPelicula.Link)" />
+        </div>
+        <div>
+            <label for="duracionhoras">DuracionHoras: </label>
+            <InputNumber id="duracionhoras" @bind-Value="nuevaPelicula.DuracionHoras" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => nuevaPelicula.DuracionHoras)" />
+        </div>
+        <div>
+            <label for="genero">Género: </label>
+            <InputText id="genero" @bind-Value="nuevaPelicula.Genero" class="form-control" />
+            <ValidationMessage For="@(() => nuevaPelicula.Genero)" />
+        </div>
+
+        <div>
+            <label for="calificacion">Calificación: </label>
+            <InputNumber id="calificacion" @bind-Value="nuevaPelicula.Calificacion" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => nuevaPelicula.Calificacion)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(resultado))
+{
+    <div class="alert alert-info mt-3">@resultado</div>
+    <p>@nuevaPelicula.Titulo </p>
+    <p>@nuevaPelicula.Director</p>
+    <p>@nuevaPelicula.Anio</p>
+    <p>@nuevaPelicula.Link</p>
+    <p>@nuevaPelicula.DuracionHoras</p>
+    <p>@nuevaPelicula.Genero</p>
+    <p>@nuevaPelicula.Calificacion</p>
+}
+
+@code {
+    private Pelicula nuevaPelicula = new Pelicula();
+    private string resultado = string.Empty;
+
+    private async Task guardarPeliculas()
+    {
+        try
+        {
+
+            bool guardado = await PeliculaServicio.guardarPelicula(nuevaPelicula);
+            resultado = guardado ? "Película guardada correctamente" : "Error al guardar";
+           
+
+            if (guardado)
+            {
+                await Task.Delay(1500); // Espera 1.5 segundos
+                NavigationManager.NavigateTo("/peliculas"); // Redirige
+            }
+        }
+        catch (Exception ex)
+        {
+            resultado = $"Error: {ex.Message}";
+        }
+    }
+}

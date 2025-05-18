@@ -1,0 +1,122 @@
+﻿@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject PeliculaNegocio PeliculaServicio
+@inject NavigationManager NavigationManager
+
+<h1>Editar Película</h1>
+
+<EditForm Model="@peliculaEditar" OnValidSubmit="@ActualizarPelicula">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <div>
+            <label for="titulo">Título: </label>
+            <InputText id="titulo" @bind-Value="peliculaEditar.Titulo" class="form-control" />
+            <ValidationMessage For="@(() => peliculaEditar.Titulo)" />
+        </div>
+
+        <div>
+            <label for="director">Director: </label>
+            <InputText id="director" @bind-Value="peliculaEditar.Director" class="form-control" />
+            <ValidationMessage For="@(() => peliculaEditar.Director)" />
+        </div>
+
+        <div>
+            <label for="anio">Año: </label>
+            <InputNumber id="anio" @bind-Value="peliculaEditar.Anio" class="form-control" />
+            <ValidationMessage For="@(() => peliculaEditar.Anio)" />
+        </div>
+
+        <div>
+            <label for="link">Enlace (Link): </label>
+            <InputText id="link" @bind-Value="peliculaEditar.Link" class="form-control" />
+            <ValidationMessage For="@(() => peliculaEditar.Link)" />
+        </div>
+
+        <div>
+            <label for="duracionhoras">Duración (horas): </label>
+            <InputNumber id="duracionhoras" @bind-Value="peliculaEditar.DuracionHoras" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => peliculaEditar.DuracionHoras)" />
+        </div>
+
+        <div>
+            <label for="genero">Género: </label>
+            <InputText id="genero" @bind-Value="peliculaEditar.Genero" class="form-control" />
+            <ValidationMessage For="@(() => peliculaEditar.Genero)" />
+        </div>
+
+        <div>
+            <label for="calificacion">Calificación: </label>
+            <InputNumber id="calificacion" @bind-Value="peliculaEditar.Calificacion" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => peliculaEditar.Calificacion)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(resultado))
+{
+    <div class="alert alert-info mt-3">@resultado</div>
+    <div class="mt-3">
+        <h4>Datos actualizados:</h4>
+        <p><strong>Título:</strong> @peliculaEditar.Titulo</p>
+        <p><strong>Director:</strong> @peliculaEditar.Director</p>
+        <p><strong>Año:</strong> @peliculaEditar.Anio</p>
+        <p><strong>Enlace:</strong> @peliculaEditar.Link</p>
+        <p><strong>Duración:</strong> @peliculaEditar.DuracionHoras horas</p>
+        <p><strong>Género:</strong> @peliculaEditar.Genero</p>
+        <p><strong>Calificación:</strong> @peliculaEditar.Calificacion</p>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Data { get; set; }
+    public int IdPelicula { get; set; }
+
+    private Pelicula peliculaEditar = new Pelicula();
+    private string resultado = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Cargar los datos de la película a editar
+        var peliculas = await PeliculaServicio.listarPeliculas();
+        var peliculaExistente = peliculas.FirstOrDefault(p => p.IdPelicula == Data);
+
+        if (peliculaExistente != null)
+        {
+            peliculaEditar = new Pelicula
+                {
+                    IdPelicula = Data,
+                    Titulo = peliculaExistente.Titulo,
+                    Director = peliculaExistente.Director,
+                    Anio = peliculaExistente.Anio,
+                    Link = peliculaExistente.Link,
+                    DuracionHoras = peliculaExistente.DuracionHoras,
+                    Genero = peliculaExistente.Genero,
+                    Calificacion = peliculaExistente.Calificacion
+                };
+        }
+    }
+
+    private async Task ActualizarPelicula()
+    {
+        try
+        {
+            bool actualizado = await PeliculaServicio.actualizarPeliculas(peliculaEditar);
+            resultado = actualizado ? "Película actualizada correctamente" : "Error al actualizar";
+
+            if (actualizado)
+            {
+                await Task.Delay(1500);
+                NavigationManager.NavigateTo("/peliculas");
+            }
+        }
+        catch (Exception ex)
+        {
+            resultado = $"Error: {ex.Message}";
+        }
+    }
+}

@@ -1,0 +1,82 @@
+﻿@page "/peliculas"
+@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject PeliculaNegocio PeliculaNegocio
+
+<h3>listar Peliculas</h3>
+
+@if (peliculas == null)
+{
+    <p><em>No se pudo acceder a la base de datos</em></p>
+}
+else if (peliculas.Count == 0)
+{
+    <p><em>No hay peliculas disponibles.</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdPelicula</th>
+                <th>Titulo</th>
+                <th>Director</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pelicula in peliculas)
+            {
+                <tr>
+                    <td>@pelicula.IdPelicula</td>
+                    <td>@pelicula.Titulo</td>
+                    <td>@pelicula.Director</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => EditarPelicula(pelicula.IdPelicula)">Editar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (esEdicion)
+{
+    <EditarPelicula Data="@peliClickeada"/>
+}
+else
+{
+    <NuevaPelicula/>
+}
+
+@code {
+    private List<Pelicula> peliculas = new List<Pelicula>();
+    private Pelicula nuevaPelicula = new Pelicula();
+    private bool esEdicion = false;
+    private int idPeliculaEditar;
+    private int peliClickeada;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarPeliculas();
+    }
+
+    private async Task CargarPeliculas()
+    {
+        peliculas = await PeliculaNegocio.listarPeliculas();
+    }
+
+
+    private void EditarPelicula(int id)
+    {
+        esEdicion = !esEdicion;
+        peliClickeada = id;
+    }
+
+
+    private async Task ResetFormulario()
+    {
+        nuevaPelicula = new Pelicula();
+        esEdicion = false;
+    }
+}

@@ -1,0 +1,36 @@
+﻿<h3>Nuevo componete</h3>
+
+<input type="text" @bind-value="variable" />
+<div></div>
+<br />
+<p>Ingrese usuario y Password</p>
+<br />
+<input type="text" @bind-value="usuario" />
+<div></div>
+<input type="text" @bind-value="password" />
+<div></div>
+<input type="button" value="iniciar" @onclick="Cargar" />
+<div></div>
+
+<h1>
+	@variable
+</h1>
+
+@code {
+	[Parameter]
+	public string Parametro { get; set; }
+
+	string variable = "variable de pagina";
+	string usuario = "usuario";
+	string password = "password";
+
+	public void Cargar()
+	{
+		variable = "  usuario  " + usuario + "  password " + password;
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		variable = Parametro;
+	}
+}
