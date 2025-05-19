@@ -2118,6 +2118,6 @@ C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\BlazorWeb.dll
 C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\refint\BlazorWeb.dll
 C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\BlazorWeb.pdb
 C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\ref\BlazorWeb.dll
-C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\q6uywdz1gh-x9t995rpwg.gz
-C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\9slgmvyey4-uk1clufnrt.gz
-C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\gj9psvzcp1-7fkkxjdjo0.gz
+C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\q6uywdz1gh-vlha7eiu4c.gz
+C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\9slgmvyey4-6tzf1eozld.gz
+C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\gj9psvzcp1-ik3yuw4um9.gz

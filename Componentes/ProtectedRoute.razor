@@ -1,0 +1,41 @@
+﻿@inject BlazorWeb.Negocio.LoginNegocio LoginNegocio
+@inject NavigationManager NavigationManager
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private bool? tieneToken = null;
+
+    // Rutas públicas que NO requieren token
+    private readonly string[] rutasPublicas = new[] { "/login", "/registro", "/" };
+
+    protected override async Task OnInitializedAsync()
+    {
+        var rutaActual = NavigationManager.Uri.Replace(NavigationManager.BaseUri, "/");
+
+        // Si la ruta actual es pública, no bloquear
+        if (Array.Exists(rutasPublicas, r => r.Equals(rutaActual, StringComparison.OrdinalIgnoreCase)))
+        {
+            tieneToken = true;  // Permitimos el acceso
+            return;
+        }
+
+        var token = await LoginNegocio.ObtenerTokenAsync("tokenClave"); // Cambia "tokenClave"
+        tieneToken = !string.IsNullOrEmpty(token);
+
+        if (tieneToken == false)
+        {
+            NavigationManager.NavigateTo("/login", true);
+        }
+    }
+}
+
+@if (tieneToken == null)
+{
+    <p>Cargando...</p>
+}
+else if (tieneToken == true)
+{
+    @ChildContent
+}

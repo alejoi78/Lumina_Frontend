@@ -1,0 +1,129 @@
+﻿@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject SerieNegocio SerieServicio
+
+<h1>Editar Serie</h1>
+
+<EditForm Model="@serieEditar" OnValidSubmit="@ActualizarSerie">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <div>
+            <label for="titulo">Título: </label>
+            <InputText id="titulo" @bind-Value="serieEditar.Titulo" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.Titulo)" />
+        </div>
+
+        <div>
+            <label for="director">Director: </label>
+            <InputText id="director" @bind-Value="serieEditar.Director" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.Director)" />
+        </div>
+
+        <div>
+            <label for="anio">Año: </label>
+            <InputNumber id="anio" @bind-Value="serieEditar.Anio" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.Anio)" />
+        </div>
+
+        <div>
+            <label for="link">Enlace (Link): </label>
+            <InputText id="link" @bind-Value="serieEditar.Link" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.Link)" />
+        </div>
+
+        <div>
+            <label for="temporadas">Temporadas: </label>
+            <InputNumber id="temporadas" @bind-Value="serieEditar.Temporadas" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.Temporadas)" />
+        </div>
+
+        <div>
+            <label for="duracionPorCapitulo">Duración por capítulo (min): </label>
+            <InputNumber id="duracionPorCapitulo" @bind-Value="serieEditar.DuracionPorCapitulo" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.DuracionPorCapitulo)" />
+        </div>
+
+        <div>
+            <label for="genero">Género: </label>
+            <InputText id="genero" @bind-Value="serieEditar.Genero" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.Genero)" />
+        </div>
+
+        <div>
+            <label for="calificacion">Calificación: </label>
+            <InputNumber id="calificacion" @bind-Value="serieEditar.Calificacion" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => serieEditar.Calificacion)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(resultado))
+{
+    <div class="alert alert-info mt-3">@resultado</div>
+    <div class="mt-3">
+        <h4>Datos actualizados:</h4>
+        <p><strong>Título:</strong> @serieEditar.Titulo</p>
+        <p><strong>Director:</strong> @serieEditar.Director</p>
+        <p><strong>Año:</strong> @serieEditar.Anio</p>
+        <p><strong>Enlace:</strong> @serieEditar.Link</p>
+        <p><strong>Temporadas:</strong> @serieEditar.Temporadas</p>
+        <p><strong>Duración por capítulo:</strong> @serieEditar.DuracionPorCapitulo min</p>
+        <p><strong>Género:</strong> @serieEditar.Genero</p>
+        <p><strong>Calificación:</strong> @serieEditar.Calificacion</p>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Data { get; set; }
+
+    [Parameter]
+    public EventCallback OnSerieActualizada { get; set; }
+
+    private Serie serieEditar = new Serie();
+    private string resultado = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var series = await SerieServicio.listarSeries();
+        var serieExistente = series.FirstOrDefault(s => s.IdSerie == Data);
+
+        if (serieExistente != null)
+        {
+            serieEditar = new Serie
+                {
+                    IdSerie = Data,
+                    Titulo = serieExistente.Titulo,
+                    Director = serieExistente.Director,
+                    Anio = serieExistente.Anio,
+                    Link = serieExistente.Link,
+                    Temporadas = serieExistente.Temporadas,
+                    DuracionPorCapitulo = serieExistente.DuracionPorCapitulo,
+                    Genero = serieExistente.Genero,
+                    Calificacion = serieExistente.Calificacion
+                };
+        }
+    }
+
+    private async Task ActualizarSerie()
+    {
+        try
+        {
+            bool actualizado = await SerieServicio.actualizarSeries(serieEditar);
+            resultado = actualizado ? "Serie actualizada correctamente" : "Error al actualizar";
+
+            if (actualizado)
+            {
+                await OnSerieActualizada.InvokeAsync(null);
+            }
+        }
+        catch (Exception ex)
+        {
+            resultado = $"Error: {ex.Message}";
+        }
+    }
+}

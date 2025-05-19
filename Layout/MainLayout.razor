@@ -1,46 +1,56 @@
 ﻿@inherits LayoutComponentBase
+
 <div class="page">
     <div class="container-fluid">
         <div class="row">
             <div class="layouticonos col-sm-auto bg-dark sticky-top">
-                <div class="layouticonos d-flex flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top ">
+                <div class="layouticonos d-flex flex-column bg-dark align-items-center sticky-top vh-100">
+
+                    <!-- Logo / top icon -->
                     <a href="/" class="layouticonos d-block p-3 link-primary text-decoration-none" title="Principal" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Principal">
                         <i class="bi bi-bootstrap fs-1 d-flex justify-content-center align-items-center w-100 h-100"></i>
                     </a>
-                    <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
-                        <li class="nav-item">
-                            <NavLink href="" class="layouticonos nav-link py-3 px-2" title="Principal" Match="NavLinkMatch.All" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Principal">
-                                <i class="bi bi-house-door-fill fs-2"></i>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink href="counter" class="layouticonos nav-link py-3 px-2" title="Contador" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Contador">
-                                <i class="bi bi-plus-square-fill fs-2"></i>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink href="peliculas" class="layouticonos nav-link py-3 px-2" title="Películas" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Películas">
-                                <i class="bi bi-film fs-2"></i>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink href="series" class="layouticonos nav-link py-3 px-2" title="Series" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Series">
-                                <i class="bi bi-collection-play fs-2"></i>
-                            </NavLink>
-                        </li>
-                    </ul>
-                    <div class="dropdown">
-                        <a href="#" class="layouticonos d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi-person-circle fs-1 h2"></i>
-                        </a>
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+
+                    <!-- Navigation links + bottom icon -->
+                    <div class="d-flex flex-column justify-content-between align-items-center w-100 flex-grow-1">
+
+                        <!-- Main nav icons -->
+                        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center align-items-center w-100">
+                            <li class="nav-item">
+                                <NavLink href="" class="layouticonos nav-link py-3 px-2" Match="NavLinkMatch.All" title="Principal" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Principal">
+                                    <i class="bi bi-house-door-fill fs-2"></i>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink href="counter" class="layouticonos nav-link py-3 px-2" title="Contador" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Contador">
+                                    <i class="bi bi-plus-square-fill fs-2"></i>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink href="peliculas" class="layouticonos nav-link py-3 px-2" title="Películas" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Películas">
+                                    <i class="bi bi-film fs-2"></i>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink href="series" class="layouticonos nav-link py-3 px-2" title="Series" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Series">
+                                    <i class="bi bi-collection-play fs-2"></i>
+                                </NavLink>
+                            </li>
                         </ul>
+
+                        <!-- Bottom user icon with same style -->
+                        <ul class="nav nav-pills nav-flush flex-column text-center align-items-center w-100">
+                            <li>
+                                <NavLink href="login" class="layouticonos nav-link py-3 px-2" title="Perfil" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Perfil">
+                                    <i class="bi bi-person-circle fs-2"></i>
+                                </NavLink>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
+
             <div class="layoutbody col-sm min-vh-100">
                 @Body
             </div>

@@ -1,6 +1,9 @@
-﻿<Router AppAssembly="@typeof(Program).Assembly">
+﻿@inject LoginNegocio loginNegocio
+@inject NavigationManager navigationManager
+
+<Router AppAssembly="@typeof(Program).Assembly" OnNavigateAsync="HandleNavigationAsync">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <RouteView RouteData="@routeData" DefaultLayout="@GetLayout(routeData.PageType)" />
     </Found>
     <NotFound>
         <LayoutView Layout="@typeof(MainLayout)">
@@ -8,3 +11,27 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+    private async Task HandleNavigationAsync(NavigationContext context)
+    {
+        // ⚠️ Forzar token de prueba aquí
+        //await loginNegocio.GuardarTokenAsync("token", "token-prueba");
+
+        var token = await loginNegocio.ObtenerTokenAsync("token");
+
+        var esLogin = context.Path.Contains("login", StringComparison.OrdinalIgnoreCase);
+
+        if (string.IsNullOrEmpty(token) && !esLogin)
+        {
+            navigationManager.NavigateTo("/login", true);
+        }
+    }
+
+    private Type GetLayout(Type pageType)
+    {
+        return pageType.Name.Equals("Login", StringComparison.OrdinalIgnoreCase)
+            ? null // Sin layout
+            : typeof(MainLayout);
+    }
+}

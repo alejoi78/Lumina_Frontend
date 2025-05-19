@@ -20,6 +20,7 @@ namespace BlazorWeb.Negocio
             _logger = logger;
         }
 
+
         public async Task<List<Pelicula>> listarPeliculas()
         {
             try

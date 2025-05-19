@@ -1,1 +1,74 @@
-﻿
+﻿@using BlazorWeb.Entidades
+@inject HttpClient Http
+
+<h3>Formulario Serie</h3>
+
+<EditForm Model="@serie">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="titulo">Título</label>
+        <InputText id="titulo" @bind-Value="serie.Titulo" class="form-control" />
+        <ValidationMessage For="@(() => serie.Titulo)" />
+    </div>
+
+    <div class="form-group">
+        <label for="director">Director</label>
+        <InputText id="director" @bind-Value="serie.Director" class="form-control" />
+        <ValidationMessage For="@(() => serie.Director)" />
+    </div>
+
+    <div class="form-group">
+        <label for="anio">Año</label>
+        <InputNumber id="anio" @bind-Value="serie.Anio" class="form-control" />
+        <ValidationMessage For="@(() => serie.Anio)" />
+    </div>
+    <div class="form-group">
+        <label for="tempordas">Temporadas</label>
+        <InputNumber id="temporadas" @bind-Value="serie.Temporadas" class="form-control" />
+        <ValidationMessage For="@(() => serie.Temporadas)" />
+    </div>
+    <div class="form-group">
+        <label for="link">Enlace (Link)</label>
+        <InputText id="link" @bind-Value="serie.Link" class="form-control" />
+        <ValidationMessage For="@(() => serie.Link)" />
+    </div>
+    <div class="form-group">
+        <label for="duracionporcapitulo">DuracionPorCapitulo</label>
+        <InputNumber id="duracionporcapitulo" @bind-Value="serie.DuracionPorCapitulo" class="form-control" step="0.1" />
+        <ValidationMessage For="@(() => serie.DuracionPorCapitulo)" />
+    </div>
+    <div class="form-group">
+        <label for="genero">Género</label>
+        <InputText id="genero" @bind-Value="serie.Genero" class="form-control" />
+        <ValidationMessage For="@(() => serie.Genero)" />
+    </div>
+
+    <div class="form-group">
+        <label for="calificacion">Calificación</label>
+        <InputNumber id="calificacion" @bind-Value="serie.Calificacion" class="form-control" step="0.1" />
+        <ValidationMessage For="@(() => serie.Calificacion)" />
+    </div>
+
+    <button type="button" class="btn btn-primary" @onclick="Cargar">Agregar</button>
+
+    @if (!string.IsNullOrEmpty(mensaje))
+    {
+        <div class="mt-3 p-2 alert alert-info">
+            @mensaje
+        </div>
+    }
+</EditForm>
+
+@code {
+    private Serie serie = new Serie();
+    private string mensaje = string.Empty;
+
+    private void Cargar()
+    {
+        mensaje = $"Serie: {serie.Titulo}, Director: {serie.Director}, Año: {serie.Anio}, " +
+                 $"Género: {serie.Genero}, Calificación: {serie.Calificacion}, Link: {serie.Link}, " +
+                 $"Temporadas: {serie.Temporadas}, Duración por capítulo: {serie.DuracionPorCapitulo}";
+    }
+}

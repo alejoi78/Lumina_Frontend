@@ -9,12 +9,10 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="BlazorAppEjemploClase.styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/carouselHelper.js"></script>
 
 
     <!-- If you add any scoped CSS files, uncomment the following to load them
@@ -27,41 +25,49 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="layouticonos col-sm-auto bg-dark sticky-top">
-                        <div class="layouticonos d-flex flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top"">
+                        <div class="layouticonos d-flex flex-column flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top vh-100">
+
+                            <!-- Logo -->
                             <a href="/" class="layouticonos d-block p-3 link-primary text-decoration-none" title="Principal" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Principal">
                                 <i class="bi bi-bootstrap fs-1 d-flex justify-content-center align-items-center w-100 h-100"></i>
                             </a>
-                            <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
-                                <li class="nav-item">
-                                    <NavLink id="nav-home" href="" class="layouticonos nav-link py-3 px-2" title="Principal" Match="NavLinkMatch.All" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Principal">
-                                        <i class="bi bi-house-door-fill fs-2"></i>
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink id="nav-counter" href="counter" class="layouticonos nav-link py-3 px-2" title="Contador" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Contador">
-                                        <i class="bi bi-plus-square-fill fs-2"></i>
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink id="nav-peliculas" href="peliculas" class="layouticonos nav-link py-3 px-2" title="Películas" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Películas">
-                                        <i class="bi bi-film fs-2"></i>
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink id="nav-series" href="series" class="layouticonos nav-link py-3 px-2" title="Series" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Series">
-                                        <i class="bi bi-collection-play fs-2"></i>
-                                    </NavLink>
-                                </li>
-                            </ul>
-                            <div class="dropdown">
-                                <a href="#" class="layouticonos d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi-person-circle fs-1 h2"></i>
-                                </a>
-                                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+
+                            <!-- Contenedor con íconos arriba y abajo -->
+                            <div class="d-flex flex-column justify-content-between align-items-center w-100 flex-grow-1">
+
+                                <!-- Íconos principales -->
+                                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                                    <li class="nav-item">
+                                        <NavLink id="nav-home" href="" class="layouticonos nav-link py-3 px-2" title="Principal" Match="NavLinkMatch.All" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Principal">
+                                            <i class="bi bi-house-door-fill fs-2"></i>
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink id="nav-counter" href="counter" class="layouticonos nav-link py-3 px-2" title="Contador" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Contador">
+                                            <i class="bi bi-plus-square-fill fs-2"></i>
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink id="nav-peliculas" href="peliculas" class="layouticonos nav-link py-3 px-2" title="Películas" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Películas">
+                                            <i class="bi bi-film fs-2"></i>
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink id="nav-series" href="series" class="layouticonos nav-link py-3 px-2" title="Series" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Series">
+                                            <i class="bi bi-collection-play fs-2"></i>
+                                        </NavLink>
+                                    </li>
                                 </ul>
+
+                                <!-- Ícono perfil abajo -->
+                                <ul class="nav nav-pills nav-flush flex-column text-center align-items-center w-100">
+                                    <li>
+                                        <NavLink id="nav-perfil" href="perfil" class="layouticonos nav-link py-3 px-2" title="Perfil" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Perfil">
+                                            <i class="bi bi-person-circle fs-2"></i>
+                                        </NavLink>
+                                    </li>
+                                </ul>
+
                             </div>
                         </div>
                     </div>
@@ -91,7 +97,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const path = window.location.pathname.toLowerCase();
+        const path = window.location.pathname.toLowerCase();    
 
         if (path === "/" || path === "") {
             document.getElementById("nav-home")?.classList.add("active");
@@ -103,6 +109,8 @@
             document.getElementById("nav-peliculas")?.classList.add("active");
         } else if (path.includes("series")) {
             document.getElementById("nav-series")?.classList.add("active");
+        } else if (path.includes("perfil")) {
+            document.getElementById("nav-perfil")?.classList.add("active");
         }
     });
 </script>

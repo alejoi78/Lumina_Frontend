@@ -1,1 +1,100 @@
-﻿
+﻿@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject SerieNegocio SerieServicio
+@inject NavigationManager NavigationManager
+
+<h1>Nueva Serie</h1>
+
+<EditForm Model="@nuevaSerie" OnValidSubmit="@guardarSerie">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <div>
+            <label for="titulo">Título: </label>
+            <InputText id="titulo" @bind-Value="nuevaSerie.Titulo" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.Titulo)" />
+        </div>
+
+        <div>
+            <label for="director">Director: </label>
+            <InputText id="director" @bind-Value="nuevaSerie.Director" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.Director)" />
+        </div>
+
+        <div>
+            <label for="anio">Año: </label>
+            <InputNumber id="anio" @bind-Value="nuevaSerie.Anio" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.Anio)" />
+        </div>
+
+        <div>
+            <label for="link">Enlace (Link): </label>
+            <InputText id="link" @bind-Value="nuevaSerie.Link" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.Link)" />
+        </div>
+
+        <div>
+            <label for="temporadas">Temporadas: </label>
+            <InputNumber id="temporadas" @bind-Value="nuevaSerie.Temporadas" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.Temporadas)" />
+        </div>
+
+        <div>
+            <label for="duracionPorCapitulo">Duración por capítulo (minutos): </label>
+            <InputNumber id="duracionPorCapitulo" @bind-Value="nuevaSerie.DuracionPorCapitulo" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.DuracionPorCapitulo)" />
+        </div>
+
+        <div>
+            <label for="genero">Género: </label>
+            <InputText id="genero" @bind-Value="nuevaSerie.Genero" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.Genero)" />
+        </div>
+
+        <div>
+            <label for="calificacion">Calificación: </label>
+            <InputNumber id="calificacion" @bind-Value="nuevaSerie.Calificacion" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => nuevaSerie.Calificacion)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(resultado))
+{
+    <div class="alert alert-info mt-3">@resultado</div>
+    <p>@nuevaSerie.Titulo</p>
+    <p>@nuevaSerie.Director</p>
+    <p>@nuevaSerie.Anio</p>
+    <p>@nuevaSerie.Link</p>
+    <p>@nuevaSerie.Temporadas</p>
+    <p>@nuevaSerie.DuracionPorCapitulo</p>
+    <p>@nuevaSerie.Genero</p>
+    <p>@nuevaSerie.Calificacion</p>
+}
+
+@code {
+    private Serie nuevaSerie = new Serie();
+    private string resultado = string.Empty;
+
+    private async Task guardarSerie()
+    {
+        try
+        {
+            bool guardado = await SerieServicio.guardarSerie(nuevaSerie);
+            resultado = guardado ? "Serie guardada correctamente" : "Error al guardar";
+
+            if (guardado)
+            {
+                await Task.Delay(1500); // Espera 1.5 segundos
+                NavigationManager.NavigateTo("/series"); // Redirige
+            }
+        }
+        catch (Exception ex)
+        {
+            resultado = $"Error: {ex.Message}";
+        }
+    }
+}

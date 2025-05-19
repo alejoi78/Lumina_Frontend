@@ -1,22 +1,27 @@
-using System.Net.Http;
-using System;
-using BlazorWeb;
 using BlazorWeb.Negocio;
+using BlazorWeb;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");  // Selector CSS válido
-builder.RootComponents.Add<HeadOutlet>("head::after");  // Selector correcto
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-
+// Configuración del HttpClient para apuntar a tu backend
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+    BaseAddress = new Uri("http://localhost:5950") // Asegúrate que coincide con tu backend
 });
 
-//builder.Services.AddScoped<SerieNegocio>();
+// Si usas HttpClientFactory (recomendado para servicios)
+builder.Services.AddHttpClient("BackendAPI", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5950");
+});
+
+// Registro de tus servicios
+builder.Services.AddScoped<SerieNegocio>();
 builder.Services.AddScoped<PeliculaNegocio>();
-builder.Services.AddHttpClient();
+builder.Services.AddScoped<LoginNegocio>();
+
 await builder.Build().RunAsync();

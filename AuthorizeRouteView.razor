@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Components
+@inject NavigationManager Navigation
+@inject BlazorWeb.Negocio.LoginNegocio LoginNegocio
+
+<LayoutView Layout="@Layout">
+    @if (autorizado)
+    {
+        <RouteView RouteData="@RouteData" />
+    }
+    else if (esRutaLogin)
+    {
+        <RouteView RouteData="@RouteData" /> <!-- Mostrar login sin token -->
+    }
+    else if (!verificado)
+    {
+        <p>Cargando...</p>
+    }
+</LayoutView>
+
+@code {
+    [Parameter] public RouteData RouteData { get; set; } = default!;
+    [Parameter] public Type? Layout { get; set; }
+
+    private bool autorizado = false;
+    private bool verificado = false;
+    private bool esRutaLogin = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var rutaActual = Navigation.ToBaseRelativePath(Navigation.Uri).ToLower();
+        esRutaLogin = rutaActual == "login";
+
+        var token = await LoginNegocio.ObtenerTokenAsync("token");
+
+        if (!string.IsNullOrWhiteSpace(token))
+        {
+            autorizado = true;
+
+            if (esRutaLogin)
+            {
+                Navigation.NavigateTo("/home", true); // o la ruta principal
+            }
+        }
+
+        verificado = true;
+    }
+}

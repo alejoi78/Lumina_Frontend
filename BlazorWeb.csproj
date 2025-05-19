@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="AuthorizeRouteView.razor" />
+    <Content Remove="Componentes\ProtectedRoute.razor" />
     <Content Remove="Layout\NavMenu.razor" />
   </ItemGroup>
 

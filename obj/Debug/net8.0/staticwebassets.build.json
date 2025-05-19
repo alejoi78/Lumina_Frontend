@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mzJaZ9wQg/Jn3JRSnnsXcLB5h95o/cbaSlKXNttr3Y8=",
+  "Hash": "0tY/IahfXsvScDavsPCSuOFsdvABk5Dz7BAard4siJY=",
   "Source": "BlazorWeb",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "7fkkxjdjo0",
-      "Integrity": "nd6OkzDDziqVS8pDh1yD2Yxk0UVlouzCr54TdQAa7Ms=",
+      "Fingerprint": "ik3yuw4um9",
+      "Integrity": "bpsgV6ts17i18hTTHIIEMYJkeUszmUGdoy8rYUlYLiI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "uk1clufnrt",
-      "Integrity": "/q+KKZGNprUr1ynDZ/YJWQIjUxhSAjvRCrSgKWFC9Uw=",
+      "Fingerprint": "6tzf1eozld",
+      "Integrity": "9sMAOjxl+t6uP4ScyYSZ3+yX3XTgfiJmgU1LMC4esM8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\BlazorWeb.pdb"
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "x9t995rpwg",
-      "Integrity": "dcntZ3RVaV4rNoGEpoVYBnebNZBCuhWWbU0Af3LhRIs=",
+      "Fingerprint": "vlha7eiu4c",
+      "Integrity": "XYkhn9GbIIbsyUM0sP7KIpi4h0+14AcArewXJUcJ8F0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\webcil\\BlazorWeb.wasm"
@@ -5687,7 +5687,7 @@
       "OriginalItemSpec": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm"
     },
     {
-      "Identity": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\9slgmvyey4-uk1clufnrt.gz",
+      "Identity": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\9slgmvyey4-6tzf1eozld.gz",
       "SourceId": "BlazorWeb",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\",
@@ -5701,8 +5701,8 @@
       "RelatedAsset": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BlazorWeb.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "d95lj8z6l0",
-      "Integrity": "4dAka6doG8JJYapYkJZPL5YyBXKtkHWo2bCGL03Ufhc=",
+      "Fingerprint": "wa3bm2ermi",
+      "Integrity": "eKPSTYTgxIVVd/iQcqEGoCA1CD7dNl+R02oqvHLfpHg=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BlazorWeb.pdb"
@@ -6422,7 +6422,7 @@
       "OriginalItemSpec": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Runtime.Loader.wasm"
     },
     {
-      "Identity": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\gj9psvzcp1-7fkkxjdjo0.gz",
+      "Identity": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\gj9psvzcp1-ik3yuw4um9.gz",
       "SourceId": "BlazorWeb",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\",
@@ -6436,8 +6436,8 @@
       "RelatedAsset": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "9ii0l4jz9z",
-      "Integrity": "sRI7h/E6oZ5M9GGtojHjCttRUHftOQo5F9rGWsNkTi8=",
+      "Fingerprint": "idrjroqz9f",
+      "Integrity": "qjMP0NzPioa4h9Ulv2BPb5G/fj0TI9Vl4u4G/82R6T0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -7724,7 +7724,7 @@
       "OriginalItemSpec": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.AppContext.wasm"
     },
     {
-      "Identity": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\q6uywdz1gh-x9t995rpwg.gz",
+      "Identity": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\q6uywdz1gh-vlha7eiu4c.gz",
       "SourceId": "BlazorWeb",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\",
@@ -7738,8 +7738,8 @@
       "RelatedAsset": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BlazorWeb.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jvxwu771m3",
-      "Integrity": "f328S5bh3496ZdH4yA1vLV4QWOQSd3qnplHLHMFO6rk=",
+      "Fingerprint": "litooih4gy",
+      "Integrity": "k6SWvGgd6ZLoGvMFGNAKnV90CvW3+1n3V5tuidrZuCQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BlazorWeb.wasm"
@@ -8809,8 +8809,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "plmmnksejp",
-      "Integrity": "E13Z1T8s/XvoNhvPksoZG/ZxXtQF382RSiluildFxwU=",
+      "Fingerprint": "jgubtxvmet",
+      "Integrity": "8z9dNMaS+IMhFn4ZwXIN9uGkg1bB/gdw+heNnsPvpMw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
@@ -8893,8 +8893,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sc9tlzshiq",
-      "Integrity": "nHXVjBJFzA1hFzZAaxJlybpm6ahFHnijdYRnEywBv7k=",
+      "Fingerprint": "e8obv4nrjd",
+      "Integrity": "bo4vXrDmSWVVZLPKtjWzj4jsXzmkGchOGQ84b8f1R7c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -9844,11 +9844,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nd6OkzDDziqVS8pDh1yD2Yxk0UVlouzCr54TdQAa7Ms=\""
+          "Value": "\"bpsgV6ts17i18hTTHIIEMYJkeUszmUGdoy8rYUlYLiI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:05:33 GMT"
+          "Value": "Mon, 19 May 2025 00:03:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9858,13 +9858,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nd6OkzDDziqVS8pDh1yD2Yxk0UVlouzCr54TdQAa7Ms="
+          "Value": "sha256-bpsgV6ts17i18hTTHIIEMYJkeUszmUGdoy8rYUlYLiI="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\gj9psvzcp1-7fkkxjdjo0.gz",
+      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\gj9psvzcp1-ik3yuw4um9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -9883,11 +9883,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sRI7h/E6oZ5M9GGtojHjCttRUHftOQo5F9rGWsNkTi8=\""
+          "Value": "\"qjMP0NzPioa4h9Ulv2BPb5G/fj0TI9Vl4u4G/82R6T0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:05:13 GMT"
+          "Value": "Sun, 18 May 2025 23:56:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9907,19 +9907,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"nd6OkzDDziqVS8pDh1yD2Yxk0UVlouzCr54TdQAa7Ms=\""
+          "Value": "W/\"bpsgV6ts17i18hTTHIIEMYJkeUszmUGdoy8rYUlYLiI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nd6OkzDDziqVS8pDh1yD2Yxk0UVlouzCr54TdQAa7Ms="
+          "Value": "sha256-bpsgV6ts17i18hTTHIIEMYJkeUszmUGdoy8rYUlYLiI="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\gj9psvzcp1-7fkkxjdjo0.gz",
+      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\gj9psvzcp1-ik3yuw4um9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9936,11 +9936,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sRI7h/E6oZ5M9GGtojHjCttRUHftOQo5F9rGWsNkTi8=\""
+          "Value": "\"qjMP0NzPioa4h9Ulv2BPb5G/fj0TI9Vl4u4G/82R6T0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:05:13 GMT"
+          "Value": "Sun, 18 May 2025 23:56:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9958,7 +9958,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sRI7h/E6oZ5M9GGtojHjCttRUHftOQo5F9rGWsNkTi8="
+          "Value": "sha256-qjMP0NzPioa4h9Ulv2BPb5G/fj0TI9Vl4u4G/82R6T0="
         }
       ]
     },
@@ -10110,7 +10110,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49188"
+          "Value": "67312"
         },
         {
           "Name": "Content-Type",
@@ -10118,11 +10118,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/q+KKZGNprUr1ynDZ/YJWQIjUxhSAjvRCrSgKWFC9Uw=\""
+          "Value": "\"9sMAOjxl+t6uP4ScyYSZ3+yX3XTgfiJmgU1LMC4esM8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:02:04 GMT"
+          "Value": "Mon, 19 May 2025 00:03:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10132,18 +10132,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/q+KKZGNprUr1ynDZ/YJWQIjUxhSAjvRCrSgKWFC9Uw="
+          "Value": "sha256-9sMAOjxl+t6uP4ScyYSZ3+yX3XTgfiJmgU1LMC4esM8="
         }
       ]
     },
     {
       "Route": "_framework/BlazorWeb.pdb",
-      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\9slgmvyey4-uk1clufnrt.gz",
+      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\9slgmvyey4-6tzf1eozld.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000025842464"
+          "Quality": "0.000018819987"
         }
       ],
       "ResponseHeaders": [
@@ -10153,15 +10153,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38695"
+          "Value": "53134"
         },
         {
           "Name": "ETag",
-          "Value": "\"4dAka6doG8JJYapYkJZPL5YyBXKtkHWo2bCGL03Ufhc=\""
+          "Value": "\"eKPSTYTgxIVVd/iQcqEGoCA1CD7dNl+R02oqvHLfpHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:02:04 GMT"
+          "Value": "Sun, 18 May 2025 23:56:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10181,19 +10181,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"/q+KKZGNprUr1ynDZ/YJWQIjUxhSAjvRCrSgKWFC9Uw=\""
+          "Value": "W/\"9sMAOjxl+t6uP4ScyYSZ3+yX3XTgfiJmgU1LMC4esM8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/q+KKZGNprUr1ynDZ/YJWQIjUxhSAjvRCrSgKWFC9Uw="
+          "Value": "sha256-9sMAOjxl+t6uP4ScyYSZ3+yX3XTgfiJmgU1LMC4esM8="
         }
       ]
     },
     {
       "Route": "_framework/BlazorWeb.pdb.gz",
-      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\9slgmvyey4-uk1clufnrt.gz",
+      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\9slgmvyey4-6tzf1eozld.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10202,7 +10202,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38695"
+          "Value": "53134"
         },
         {
           "Name": "Content-Type",
@@ -10210,11 +10210,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4dAka6doG8JJYapYkJZPL5YyBXKtkHWo2bCGL03Ufhc=\""
+          "Value": "\"eKPSTYTgxIVVd/iQcqEGoCA1CD7dNl+R02oqvHLfpHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:02:04 GMT"
+          "Value": "Sun, 18 May 2025 23:56:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10232,7 +10232,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4dAka6doG8JJYapYkJZPL5YyBXKtkHWo2bCGL03Ufhc="
+          "Value": "sha256-eKPSTYTgxIVVd/iQcqEGoCA1CD7dNl+R02oqvHLfpHg="
         }
       ]
     },
@@ -10247,7 +10247,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "64277"
+          "Value": "107285"
         },
         {
           "Name": "Content-Type",
@@ -10255,11 +10255,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dcntZ3RVaV4rNoGEpoVYBnebNZBCuhWWbU0Af3LhRIs=\""
+          "Value": "\"XYkhn9GbIIbsyUM0sP7KIpi4h0+14AcArewXJUcJ8F0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:02:04 GMT"
+          "Value": "Mon, 19 May 2025 00:03:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10269,18 +10269,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dcntZ3RVaV4rNoGEpoVYBnebNZBCuhWWbU0Af3LhRIs="
+          "Value": "sha256-XYkhn9GbIIbsyUM0sP7KIpi4h0+14AcArewXJUcJ8F0="
         }
       ]
     },
     {
       "Route": "_framework/BlazorWeb.wasm",
-      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\q6uywdz1gh-x9t995rpwg.gz",
+      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\q6uywdz1gh-vlha7eiu4c.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000048973995"
+          "Quality": "0.000031376486"
         }
       ],
       "ResponseHeaders": [
@@ -10290,15 +10290,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "20418"
+          "Value": "31870"
         },
         {
           "Name": "ETag",
-          "Value": "\"f328S5bh3496ZdH4yA1vLV4QWOQSd3qnplHLHMFO6rk=\""
+          "Value": "\"k6SWvGgd6ZLoGvMFGNAKnV90CvW3+1n3V5tuidrZuCQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:02:04 GMT"
+          "Value": "Sun, 18 May 2025 23:56:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10318,19 +10318,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"dcntZ3RVaV4rNoGEpoVYBnebNZBCuhWWbU0Af3LhRIs=\""
+          "Value": "W/\"XYkhn9GbIIbsyUM0sP7KIpi4h0+14AcArewXJUcJ8F0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dcntZ3RVaV4rNoGEpoVYBnebNZBCuhWWbU0Af3LhRIs="
+          "Value": "sha256-XYkhn9GbIIbsyUM0sP7KIpi4h0+14AcArewXJUcJ8F0="
         }
       ]
     },
     {
       "Route": "_framework/BlazorWeb.wasm.gz",
-      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\q6uywdz1gh-x9t995rpwg.gz",
+      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\obj\\Debug\\net8.0\\compressed\\q6uywdz1gh-vlha7eiu4c.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10339,7 +10339,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "20418"
+          "Value": "31870"
         },
         {
           "Name": "Content-Type",
@@ -10347,11 +10347,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"f328S5bh3496ZdH4yA1vLV4QWOQSd3qnplHLHMFO6rk=\""
+          "Value": "\"k6SWvGgd6ZLoGvMFGNAKnV90CvW3+1n3V5tuidrZuCQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:02:04 GMT"
+          "Value": "Sun, 18 May 2025 23:56:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10369,7 +10369,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-f328S5bh3496ZdH4yA1vLV4QWOQSd3qnplHLHMFO6rk="
+          "Value": "sha256-k6SWvGgd6ZLoGvMFGNAKnV90CvW3+1n3V5tuidrZuCQ="
         }
       ]
     },
@@ -38469,7 +38469,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3378"
+          "Value": "4000"
         },
         {
           "Name": "Content-Type",
@@ -38477,11 +38477,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"E13Z1T8s/XvoNhvPksoZG/ZxXtQF382RSiluildFxwU=\""
+          "Value": "\"8z9dNMaS+IMhFn4ZwXIN9uGkg1bB/gdw+heNnsPvpMw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:05:32 GMT"
+          "Value": "Sun, 18 May 2025 17:17:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -38491,12 +38491,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-E13Z1T8s/XvoNhvPksoZG/ZxXtQF382RSiluildFxwU="
+          "Value": "sha256-8z9dNMaS+IMhFn4ZwXIN9uGkg1bB/gdw+heNnsPvpMw="
         }
       ]
     },
     {
-      "Route": "css/app.plmmnksejp.css",
+      "Route": "css/app.jgubtxvmet.css",
       "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\css\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -38506,7 +38506,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3378"
+          "Value": "4000"
         },
         {
           "Name": "Content-Type",
@@ -38514,11 +38514,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"E13Z1T8s/XvoNhvPksoZG/ZxXtQF382RSiluildFxwU=\""
+          "Value": "\"8z9dNMaS+IMhFn4ZwXIN9uGkg1bB/gdw+heNnsPvpMw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 16:05:32 GMT"
+          "Value": "Sun, 18 May 2025 17:17:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -38528,7 +38528,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "plmmnksejp"
+          "Value": "jgubtxvmet"
         },
         {
           "Name": "label",
@@ -38536,7 +38536,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-E13Z1T8s/XvoNhvPksoZG/ZxXtQF382RSiluildFxwU="
+          "Value": "sha256-8z9dNMaS+IMhFn4ZwXIN9uGkg1bB/gdw+heNnsPvpMw="
         }
       ]
     },
@@ -38787,6 +38787,51 @@
       ]
     },
     {
+      "Route": "index.e8obv4nrjd.html",
+      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6683"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bo4vXrDmSWVVZLPKtjWzj4jsXzmkGchOGQ84b8f1R7c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:11:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e8obv4nrjd"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bo4vXrDmSWVVZLPKtjWzj4jsXzmkGchOGQ84b8f1R7c="
+        }
+      ]
+    },
+    {
       "Route": "index.html",
       "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
       "Selectors": [],
@@ -38797,7 +38842,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6429"
+          "Value": "6683"
         },
         {
           "Name": "Content-Type",
@@ -38805,11 +38850,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nHXVjBJFzA1hFzZAaxJlybpm6ahFHnijdYRnEywBv7k=\""
+          "Value": "\"bo4vXrDmSWVVZLPKtjWzj4jsXzmkGchOGQ84b8f1R7c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:39:31 GMT"
+          "Value": "Sun, 18 May 2025 17:11:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -38819,52 +38864,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nHXVjBJFzA1hFzZAaxJlybpm6ahFHnijdYRnEywBv7k="
-        }
-      ]
-    },
-    {
-      "Route": "index.sc9tlzshiq.html",
-      "AssetFile": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6429"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nHXVjBJFzA1hFzZAaxJlybpm6ahFHnijdYRnEywBv7k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:39:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sc9tlzshiq"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-nHXVjBJFzA1hFzZAaxJlybpm6ahFHnijdYRnEywBv7k="
+          "Value": "sha256-bo4vXrDmSWVVZLPKtjWzj4jsXzmkGchOGQ84b8f1R7c="
         }
       ]
     },

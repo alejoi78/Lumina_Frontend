@@ -1,1 +1,84 @@
-﻿
+﻿@page "/series"
+@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject SerieNegocio SerieNegocio
+
+<h3>Listar Series</h3>
+
+@if (series == null)
+{
+    <p><em>No se pudo acceder a la base de datos</em></p>
+}
+else if (series.Count == 0)
+{
+    <p><em>No hay series disponibles.</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdSerie</th>
+                <th>Título</th>
+                <th>Director</th>
+                <th>Temporadas</th>
+                <th>Duración por Capítulo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var serie in series)
+            {
+                <tr>
+                    <td>@serie.IdSerie</td>
+                    <td>@serie.Titulo</td>
+                    <td>@serie.Director</td>
+                    <td>@serie.Temporadas</td>
+                    <td>@serie.DuracionPorCapitulo min</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => EditarSerie(serie.IdSerie)">Editar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (esEdicion)
+{
+    <EditarSerie Data="@serieClickeada" />
+}
+else
+{
+    <NuevaSerie />
+}
+
+@code {
+    private List<Serie> series = new List<Serie>();
+    private Serie nuevaSerie = new Serie();
+    private bool esEdicion = false;
+    private int idSerieEditar;
+    private int serieClickeada;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarSeries();
+    }
+
+    private async Task CargarSeries()
+    {
+        series = await SerieNegocio.listarSeries();
+    }
+
+    private void EditarSerie(int id)
+    {
+        esEdicion = !esEdicion;
+        serieClickeada = id;
+    }
+
+    private async Task ResetFormulario()
+    {
+        nuevaSerie = new Serie();
+        esEdicion = false;
+    }
+}
