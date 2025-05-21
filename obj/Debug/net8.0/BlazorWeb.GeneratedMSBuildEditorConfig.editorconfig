@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcRWRpdGFyU2VyaWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Alejo/Desktop/Lumina_Frontend/Componentes/EditarUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcRWRpdGFyVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Alejo/Desktop/Lumina_Frontend/Componentes/Form1.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcRm9ybTEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,24 +52,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcTnVldmFTZXJpZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Alejo/Desktop/Lumina_Frontend/Componentes/NuevoUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcTnVldm9Vc3VhcmlvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alejo/Desktop/Lumina_Frontend/Componentes/NuevoUsuarioLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcTnVldm9Vc3VhcmlvTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Alejo/Desktop/Lumina_Frontend/Formularios/FormularioLogin.razor]
 build_metadata.AdditionalFiles.TargetPath = Rm9ybXVsYXJpb3NcRm9ybXVsYXJpb0xvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alejo/Desktop/Lumina_Frontend/Formularios/FormularioPelicula.razor]
-build_metadata.AdditionalFiles.TargetPath = Rm9ybXVsYXJpb3NcRm9ybXVsYXJpb1BlbGljdWxhLnJhem9y
+[C:/Users/Alejo/Desktop/Lumina_Frontend/Formularios/FormularioPeliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = Rm9ybXVsYXJpb3NcRm9ybXVsYXJpb1BlbGljdWxhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Alejo/Desktop/Lumina_Frontend/Formularios/FormularioSeries.razor]
 build_metadata.AdditionalFiles.TargetPath = Rm9ybXVsYXJpb3NcRm9ybXVsYXJpb1Nlcmllcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alejo/Desktop/Lumina_Frontend/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+[C:/Users/Alejo/Desktop/Lumina_Frontend/Formularios/FormularioUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = Rm9ybXVsYXJpb3NcRm9ybXVsYXJpb1VzdWFyaW9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alejo/Desktop/Lumina_Frontend/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[C:/Users/Alejo/Desktop/Lumina_Frontend/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Alejo/Desktop/Lumina_Frontend/Pages/Home.razor]
@@ -86,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Alejo/Desktop/Lumina_Frontend/Pages/Series.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VyaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alejo/Desktop/Lumina_Frontend/Pages/Usuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Alejo/Desktop/Lumina_Frontend/_Imports.razor]

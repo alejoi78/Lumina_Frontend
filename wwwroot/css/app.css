@@ -82,36 +82,129 @@ code {
     }
 }
 
-.c-item {
-    height: 600px;
+
+
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #15171E;
+    padding: 1rem;
 }
 
-.c-img {
-    height: 600px;
-    object-fit: cover;
-    filter: brightness(0.6);
+.login-wrapper {
+    width: 100%;
+    max-width: 900px;
 }
 
-.gradient-custom-2 {
-    /* fallback for old browsers */
-    background: #fccb90;
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+.login-card {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 768px) {
-    .gradient-form {
-        height: 100vh !important;
+.login-form {
+    padding: 2rem;
+}
+
+.login-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.login-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.login-subtitle {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.login-info {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/imagenes/img05.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    min-height: 100%; /* Asegura que ocupe toda la altura */
+}
+
+.login-info-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 80%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para mejor legibilidad */
+    border-radius: 8px;
+}
+
+.login-info-content img {
+    width: 100%;
+    max-width: 300px; /* Controla el tamaño máximo de la imagen */
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    object-fit: contain; /* Asegura que la imagen no se distorsione */
+}
+
+.login-info-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.login-info-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Media queries para diferentes tamaños */
+@@media (max-width: 992px) {
+    .login-form {
+        padding: 1.5rem;
+    }
+
+    .login-logo {
+        width: 100px;
     }
 }
 
-@media (min-width: 769px) {
-    .gradient-custom-2 {
-        border-top-right-radius: .3rem;
-        border-bottom-right-radius: .3rem;
+@@media (max-width: 768px) {
+    .login-wrapper {
+        max-width: 500px;
+    }
+
+    .login-form {
+        padding: 1.25rem;
     }
 }
+
+@@media (max-width: 576px) {
+    .login-form {
+        padding: 1rem;
+    }
+
+    .login-title {
+        font-size: 1.25rem;
+    }
+}
+
 
 

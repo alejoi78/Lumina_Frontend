@@ -64,16 +64,16 @@ namespace BlazorWeb.Negocio
             }
         }
 
-        public async Task<bool> eliminarPelicula(int idPelicula)
+        public async Task<bool> eliminarSerie(int idSerie)
         {
             try
             {
-                var response = await _httpClient.DeleteAsync($"{_baseApiUrl}/{idPelicula}");
+                var response = await _httpClient.DeleteAsync($"{_baseApiUrl}/eliminar?id={idSerie}");
                 return response.IsSuccessStatusCode;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Error al eliminar película ID: {idPelicula}");
+                _logger.LogError(ex, $"Error al eliminar serie con ID: {idSerie}");
                 return false;
             }
         }

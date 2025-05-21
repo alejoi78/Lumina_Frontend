@@ -1,0 +1,54 @@
+﻿@using BlazorWeb.Entidades
+@inject HttpClient Http
+
+<h3>Formulario Usuario</h3>
+
+<EditForm Model="@usuario">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <InputText id="nombre" @bind-Value="usuario.Nombre" class="form-control" />
+        <ValidationMessage For="@(() => usuario.Nombre)" />
+    </div>
+
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <InputText id="correo" @bind-Value="usuario.Correo" class="form-control" />
+        <ValidationMessage For="@(() => usuario.Correo)" />
+    </div>
+
+    <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+        <InputText id="contrasena" type="password" @bind-Value="usuario.Contrasena" class="form-control" />
+        <ValidationMessage For="@(() => usuario.Contrasena)" />
+    </div>
+
+    <div class="form-group">
+        <label for="idRol">ID Rol</label>
+        <InputNumber id="idRol" @bind-Value="usuario.IdRol" class="form-control" />
+        <ValidationMessage For="@(() => usuario.IdRol)" />
+    </div>
+
+    <button type="button" class="btn btn-primary" @onclick="Cargar">Agregar</button>
+
+    @if (!string.IsNullOrEmpty(mensaje))
+    {
+        <div class="mt-3 p-2 alert alert-info">
+            @mensaje
+        </div>
+    }
+</EditForm>
+
+@code {
+    private Usuario usuario = new Usuario();
+    private string mensaje = string.Empty;
+
+    private void Cargar()
+    {
+        mensaje = $"Usuario: {usuario.Nombre}, Correo: {usuario.Correo}, " +
+                 $"ID Rol: {usuario.IdRol}";
+        // Nota: Por seguridad, no mostramos la contraseña en el mensaje
+    }
+}

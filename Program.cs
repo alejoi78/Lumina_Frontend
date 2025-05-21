@@ -23,5 +23,6 @@ builder.Services.AddHttpClient("BackendAPI", client =>
 builder.Services.AddScoped<SerieNegocio>();
 builder.Services.AddScoped<PeliculaNegocio>();
 builder.Services.AddScoped<LoginNegocio>();
+builder.Services.AddScoped<UsuarioNegocio>();
 
 await builder.Build().RunAsync();

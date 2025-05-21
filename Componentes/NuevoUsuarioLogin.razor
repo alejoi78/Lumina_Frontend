@@ -1,0 +1,107 @@
+﻿@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject UsuarioNegocio UsuarioServicio
+
+<div class="nuevo-usuario-form" style="padding:30px">
+    <div class="text-center mb-4">
+        <img src="/imagenes/logo.png" 
+             class="login-logo" 
+             alt="logo" style="width: 70%">
+        <h4>Crear nueva cuenta</h4>
+    </div>
+
+    <EditForm Model="@nuevoUsuario" OnValidSubmit="@guardarUsuario">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group mb-3">
+            <InputText @bind-Value="nuevoUsuario.Nombre" class="form-control" placeholder="Nombre Completo" />
+            <ValidationMessage For="@(() => nuevoUsuario.Nombre)" />
+        </div>
+
+        <div class="form-group mb-3">
+            <InputText @bind-Value="nuevoUsuario.Correo" class="form-control" placeholder="Correo Electrónico" />
+            <ValidationMessage For="@(() => nuevoUsuario.Correo)" />
+        </div>
+
+        <div class="form-group mb-3">
+            <InputText type="password" @bind-Value="nuevoUsuario.Contrasena" class="form-control" placeholder="Contraseña" />
+            <ValidationMessage For="@(() => nuevoUsuario.Contrasena)" />
+        </div>
+
+        <div style="color: white">
+            <InputNumber id="idRol" @bind-Value="nuevoUsuario.IdRol" class="form-control" placeholder="ID Rol"/>
+            <ValidationMessage For="@(() => nuevoUsuario.IdRol)" />
+        </div>
+
+        <div class="text-center mb-4">
+            <button type="submit" class="btn btn-primary login-btn mt-3" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span>Procesando...</span>
+                }
+                else
+                {
+                    <span>Registrarse</span>
+                }
+            </button>
+        </div>
+
+        <div class="text-center mt-2">
+            <p class="d-inline me-2">¿Ya tienes una cuenta?</p>
+            <button type="button" @onclick="VolverALogin" class="btn btn-outline-primary btn-sm">Iniciar Sesión</button>
+        </div>
+    </EditForm>
+
+    @if (!string.IsNullOrEmpty(resultado))
+    {
+        <div class="alert @(resultado.Contains("Error") ? "alert-danger" : "alert-success") mt-3">
+            @resultado
+        </div>
+    }
+</div>
+
+@code {
+    private Usuario nuevoUsuario = new Usuario();
+    private string resultado = string.Empty;
+    private bool isLoading = false;
+
+    [Parameter]
+    public EventCallback OnRegistroCompleto { get; set; }
+
+    private async Task guardarUsuario()
+    {
+        isLoading = true;
+        resultado = string.Empty;
+
+        try
+        {
+            bool guardado = await UsuarioServicio.guardarUsuarios(nuevoUsuario);
+            
+            if (guardado)
+            {
+                resultado = "¡Registro exitoso! Por favor inicia sesión con tus credenciales.";
+                await Task.Delay(1500); 
+                await OnRegistroCompleto.InvokeAsync(); // Notifica al componente padre
+            }
+            else
+            {
+                resultado = "Error al registrar el usuario. Por favor intenta nuevamente.";
+            }
+        }
+        catch (Exception ex)
+        {
+            resultado = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void VolverALogin()
+    {
+        OnRegistroCompleto.InvokeAsync();
+    }
+}

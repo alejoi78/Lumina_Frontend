@@ -1,0 +1,140 @@
+﻿@page "/usuarios"
+@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject UsuarioNegocio UsuarioNegocio
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0">
+            <i class="bi bi-people-fill me-2"></i>Listado de Usuarios
+        </h3>
+    </div>
+
+    @if (usuarios == null)
+    {
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <div>No se pudo acceder a la base de datos</div>
+        </div>
+    }
+    else if (usuarios.Count == 0)
+    {
+        <div class="alert alert-info d-flex align-items-center" role="alert">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <div>No hay usuarios disponibles.</div>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive rounded-3 shadow-sm">
+            <table class="table table-hover table-bordered bg-white mb-0">
+                <thead style="background-color: #bdbdbd; color: white;">
+                    <tr>
+                        <th scope="col" class="text-center">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col" class="text-center">Rol</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var usuario in usuarios)
+                    {
+                        <tr>
+                            <td class="text-center">@usuario.IdUsuario</td>
+                            <td>@usuario.Nombre</td>
+                            <td>@usuario.Correo</td>
+                            <td class="text-center">@usuario.IdRol</td>
+                            <td class="text-center">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-sm btn-outline-primary"
+                                            @onclick="() => EditarUsuario(usuario.IdUsuario)"
+                                            title="Editar usuario">
+                                        <i class="bi bi-pencil-square"></i> Editar
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger"
+                                            @onclick="() => ConfirmarEliminacion(usuario.IdUsuario)"
+                                            title="Eliminar usuario">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    <div class="d-flex justify-content-center mt-5 mb-5">
+        <div class="card" style="width: 80%;">
+            <div class="card-body">
+                @if (esEdicion)
+                {
+                    <EditarUsuario Data="@usuarioClickeado" OnUsuarioActualizado="CargarUsuarios" />
+                }
+                else
+                {
+                    <NuevoUsuario OnUsuarioCreado="CargarUsuarios" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+@code {
+    private List<Usuario> usuarios = new List<Usuario>();
+    private Usuario nuevoUsuario = new Usuario();
+    private bool esEdicion = false;
+    private int idUsuarioEditar;
+    private int usuarioClickeado;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarUsuarios();
+    }
+
+    private async Task CargarUsuarios()
+    {
+        usuarios = await UsuarioNegocio.listarUsuarios();
+    }
+
+    private void EditarUsuario(int id)
+    {
+        esEdicion = !esEdicion;
+        usuarioClickeado = id;
+    }
+
+    private async Task ResetFormulario()
+    {
+        nuevoUsuario = new Usuario();
+        esEdicion = false;
+    }
+
+    private async Task eliminarUsuario(int idUsuario)
+    {
+        try
+        {
+            bool eliminado = await UsuarioNegocio.eliminarUsuario(idUsuario);
+            if (eliminado)
+            {
+                await CargarUsuarios(); 
+                Console.WriteLine("Usuario eliminado correctamente");
+            }
+            else
+            {
+                Console.WriteLine("No se pudo eliminar el usuario");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al eliminar usuario: {ex.Message}");
+        }
+    }
+
+    private async Task ConfirmarEliminacion(int idUsuario) 
+    {
+            await eliminarUsuario(idUsuario);
+    }
+}

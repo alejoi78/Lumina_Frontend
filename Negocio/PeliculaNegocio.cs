@@ -69,12 +69,12 @@ namespace BlazorWeb.Negocio
         {
             try
             {
-                var response = await _httpClient.DeleteAsync($"{_baseApiUrl}/{idPelicula}");
+                var response = await _httpClient.DeleteAsync($"{_baseApiUrl}/eliminar?id={idPelicula}");
                 return response.IsSuccessStatusCode;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Error al eliminar película ID: {idPelicula}");
+                _logger.LogError(ex, $"Error al eliminar pelicula con ID: {idPelicula}");
                 return false;
             }
         }

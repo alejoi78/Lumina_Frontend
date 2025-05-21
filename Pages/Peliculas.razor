@@ -3,51 +3,82 @@
 @using BlazorWeb.Negocio
 @inject PeliculaNegocio PeliculaNegocio
 
-<h3>listar Peliculas</h3>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0">
+            <i class="bi bi-film me-2"></i>Listado de Películas
+        </h3>
+    </div>
 
-@if (peliculas == null)
-{
-    <p><em>No se pudo acceder a la base de datos</em></p>
-}
-else if (peliculas.Count == 0)
-{
-    <p><em>No hay peliculas disponibles.</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>IdPelicula</th>
-                <th>Titulo</th>
-                <th>Director</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var pelicula in peliculas)
-            {
-                <tr>
-                    <td>@pelicula.IdPelicula</td>
-                    <td>@pelicula.Titulo</td>
-                    <td>@pelicula.Director</td>
-                    <td>
-                        <button class="btn btn-primary" @onclick="() => EditarPelicula(pelicula.IdPelicula)">Editar</button>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+    @if (peliculas == null)
+    {
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <div>No se pudo acceder a la base de datos</div>
+        </div>
+    }
+    else if (peliculas.Count == 0)
+    {
+        <div class="alert alert-info d-flex align-items-center" role="alert">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <div>No hay películas disponibles.</div>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive rounded-3 shadow-sm">
+            <table class="table table-hover table-bordered bg-white mb-0">
+                <thead style="background-color: #bdbdbd; color: white;">
+                    <tr>
+                        <th scope="col" class="text-center">ID</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Director</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pelicula in peliculas)
+                    {
+                        <tr>
+                            <td class="text-center">@pelicula.IdPelicula</td>
+                            <td>@pelicula.Titulo</td>
+                            <td>@pelicula.Director</td>
+                            <td class="text-center">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-sm btn-outline-primary"
+                                            @onclick="() => EditarPelicula(pelicula.IdPelicula)"
+                                            title="Editar película">
+                                        <i class="bi bi-pencil-square"></i> Editar
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger"
+                                            @onclick="() => ConfirmarEliminacion(pelicula.IdPelicula)"
+                                            title="Eliminar pelicula">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
 
-@if (esEdicion)
-{
-    <EditarPelicula Data="@peliClickeada"/>
-}
-else
-{
-    <NuevaPelicula/>
-}
+    <div class="d-flex justify-content-center mt-5 mb-5">
+        <div class="card" style="width: 80%;">
+            <div class="card-body">
+                @if (esEdicion)
+                {
+                    <EditarPelicula Data="@peliClickeada" OnPeliculaActualizada="CargarPeliculas" />
+                }
+                else
+                {
+                    <NuevaPelicula OnPeliculaCreada="CargarPeliculas" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
     private List<Pelicula> peliculas = new List<Pelicula>();
@@ -66,17 +97,41 @@ else
         peliculas = await PeliculaNegocio.listarPeliculas();
     }
 
-
     private void EditarPelicula(int id)
     {
         esEdicion = !esEdicion;
         peliClickeada = id;
     }
 
-
     private async Task ResetFormulario()
     {
         nuevaPelicula = new Pelicula();
         esEdicion = false;
+    }
+
+    private async Task eliminarPelicula(int idPelicula)
+    {
+        try
+        {
+            bool eliminado = await PeliculaNegocio.eliminarPelicula(idPelicula);
+            if (eliminado)
+            {
+                await CargarPeliculas();
+                Console.WriteLine("Pelicula eliminado correctamente");
+            }
+            else
+            {
+                Console.WriteLine("No se pudo eliminar la pelicula");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al eliminar la pelicula: {ex.Message}");
+        }
+    }
+
+    private async Task ConfirmarEliminacion(int idPelicula)
+    {
+        await eliminarPelicula(idPelicula);
     }
 }

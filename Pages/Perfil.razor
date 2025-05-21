@@ -1,1 +1,129 @@
-﻿
+﻿@page "/perfil"
+@using System.Text.Json
+@using System.Text.Json.Serialization
+
+<PageTitle>Perfil</PageTitle>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Perfil de Usuario</h3>
+                </div>
+                <div class="card-body">
+                    @if (userInfo != null)
+                    {
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Nombre:</label>
+                            <p class="form-control-static">@userInfo.Name</p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Correo:</label>
+                            <p class="form-control-static">@userInfo.Email</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-danger">No se encontró información del usuario.</p>
+                    }
+                </div>
+                <div class="card-footer text-end">
+                    <button class="btn btn-danger" @onclick="IncrementCount">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private UserInfo? userInfo;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUserData();
+    }
+
+    private async Task LoadUserData()
+    {
+        var token = await JS.InvokeAsync<string>("localStorage.getItem", "token");
+
+        if (!string.IsNullOrEmpty(token))
+        {
+            try
+            {
+                var payload = DecodeJwtPayload(token);
+                await JS.InvokeVoidAsync("console.log", "Payload decodificado:", payload);
+
+                // Opción 1: Deserialización completa (recomendada)
+                userInfo = JsonSerializer.Deserialize<UserInfo>(payload, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                // Opción 2: Extracción manual del correo
+                var jsonDoc = JsonDocument.Parse(payload);
+                if (jsonDoc.RootElement.TryGetProperty("email", out var emailProp))
+                {
+                    var userCorreo = emailProp.GetString();
+                    await JS.InvokeVoidAsync("console.log", "Correo extraído:", userCorreo);
+                }
+
+                if (userInfo != null)
+                {
+                    await JS.InvokeVoidAsync("console.log", "Datos completos:", userInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+                await JS.InvokeVoidAsync("console.error", "Error al procesar token:", ex.Message);
+            }
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("console.warn", "No hay token en localStorage");
+        }
+    }
+
+    private string DecodeJwtPayload(string token)
+    {
+        var parts = token.Split('.');
+        if (parts.Length > 1)
+        {
+            var payload = parts[1];
+            payload = payload.Replace('-', '+').Replace('_', '/');
+            switch (payload.Length % 4)
+            {
+                case 2: payload += "=="; break;
+                case 3: payload += "="; break;
+            }
+            var bytes = Convert.FromBase64String(payload);
+            return System.Text.Encoding.UTF8.GetString(bytes);
+        }
+        return "{}";
+    }
+
+    private async Task IncrementCount()
+    {
+        await JS.InvokeVoidAsync("localStorage.removeItem", "token");
+        await JS.InvokeVoidAsync("console.log", "Token eliminado. Recargando página...");
+        NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+    }
+
+    [Inject]
+    private IJSRuntime JS { get; set; }
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    private class UserInfo
+    {
+        [JsonPropertyName("unique_name")]
+        public string? Name { get; set; }
+
+        [JsonPropertyName("email")]
+        public string? Email { get; set; }
+    }
+}

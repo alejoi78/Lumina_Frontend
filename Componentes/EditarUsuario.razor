@@ -1,0 +1,101 @@
+﻿@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject UsuarioNegocio UsuarioServicio
+@inject NavigationManager NavigationManager
+
+<h1>Editar Usuario</h1>
+
+<EditForm Model="@usuarioEditar" OnValidSubmit="@ActualizarUsuario">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <div>
+            <label for="nombre">Nombre: </label>
+            <InputText id="nombre" @bind-Value="usuarioEditar.Nombre" class="form-control" />
+            <ValidationMessage For="@(() => usuarioEditar.Nombre)" />
+        </div>
+
+        <div>
+            <label for="correo">Correo: </label>
+            <InputText id="correo" @bind-Value="usuarioEditar.Correo" class="form-control" />
+            <ValidationMessage For="@(() => usuarioEditar.Correo)" />
+        </div>
+
+        <div>
+            <label for="contrasena">Contraseña: </label>
+            <InputText id="contrasena" type="password" @bind-Value="usuarioEditar.Contrasena" class="form-control" />
+            <ValidationMessage For="@(() => usuarioEditar.Contrasena)" />
+        </div>
+
+        <div>
+            <label for="idRol">ID Rol: </label>
+            <InputNumber id="idRol" @bind-Value="usuarioEditar.IdRol" class="form-control" />
+            <ValidationMessage For="@(() => usuarioEditar.IdRol)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(resultado))
+{
+    <div class="alert alert-info mt-3">@resultado</div>
+    <div class="mt-3">
+        <h4>Datos actualizados:</h4>
+        <p><strong>Nombre:</strong> @usuarioEditar.Nombre</p>
+        <p><strong>Correo:</strong> @usuarioEditar.Correo</p>
+        <p><strong>ID Rol:</strong> @usuarioEditar.IdRol</p>
+        <!-- No mostramos la contraseña por seguridad -->
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Data { get; set; }  
+
+    [Parameter]
+    public EventCallback OnUsuarioActualizado { get; set; }  // Nuevo parámetro
+
+    private Usuario usuarioEditar = new Usuario();
+    private string resultado = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Cargar los datos del usuario a editar
+        var usuarios = await UsuarioServicio.listarUsuarios();
+        var usuarioExistente = usuarios.FirstOrDefault(u => u.IdUsuario == Data);
+
+        if (usuarioExistente != null)
+        {
+            usuarioEditar = new Usuario
+                {
+                    IdUsuario = Data,
+                    Nombre = usuarioExistente.Nombre,
+                    Correo = usuarioExistente.Correo,
+                    Contrasena = usuarioExistente.Contrasena,
+                    IdRol = usuarioExistente.IdRol
+                };
+        }
+    }
+
+    private async Task ActualizarUsuario()
+    {
+        try
+        {
+            bool actualizado = await UsuarioServicio.actualizarUsuarios(usuarioEditar);
+            resultado = actualizado ? "Usuario actualizado correctamente" : "Error al actualizar";
+
+            if (actualizado)
+            {
+                await OnUsuarioActualizado.InvokeAsync(); // Notificar al padre
+                await Task.Delay(1500);
+                NavigationManager.NavigateTo("/usuarios");
+            }
+        }
+        catch (Exception ex)
+        {
+            resultado = $"Error: {ex.Message}";
+        }
+    }
+}

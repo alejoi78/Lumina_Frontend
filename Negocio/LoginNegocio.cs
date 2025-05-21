@@ -31,8 +31,8 @@ namespace BlazorWeb.Negocio
         var requestData = new
         {
             idUsuario = 0,  // Valor fijo como solicitaste
-            Correo = "correo@gmail.com",  // Valor fijo como solicitaste
-            Nombre = nombre,
+            Correo = nombre,  // Valor fijo como solicitaste
+            Nombre = "nombre",
             Contrasena = contrasena
         };
 

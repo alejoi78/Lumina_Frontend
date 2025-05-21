@@ -21,6 +21,18 @@
       "PackagePath": "staticwebassets\\imagenes\\img02.jpg"
     },
     {
+      "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img03.png",
+      "PackagePath": "staticwebassets\\imagenes\\img03.png"
+    },
+    {
+      "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img05.png",
+      "PackagePath": "staticwebassets\\imagenes\\img05.png"
+    },
+    {
+      "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\logo.png",
+      "PackagePath": "staticwebassets\\imagenes\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

@@ -1,0 +1,76 @@
+﻿@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject UsuarioNegocio UsuarioServicio
+@inject NavigationManager NavigationManager
+
+<h1>Nuevo Usuario</h1>
+
+<EditForm Model="@nuevoUsuario" OnValidSubmit="@guardarUsuario">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <div>
+            <label for="nombre">Nombre: </label>
+            <InputText id="nombre" @bind-Value="nuevoUsuario.Nombre" class="form-control" />
+            <ValidationMessage For="@(() => nuevoUsuario.Nombre)" />
+        </div>
+
+        <div>
+            <label for="correo">Correo: </label>
+            <InputText id="correo" @bind-Value="nuevoUsuario.Correo" class="form-control" />
+            <ValidationMessage For="@(() => nuevoUsuario.Correo)" />
+        </div>
+
+        <div>
+            <label for="contrasena">Contraseña: </label>
+            <InputText id="contrasena" type="password" @bind-Value="nuevoUsuario.Contrasena" class="form-control" />
+            <ValidationMessage For="@(() => nuevoUsuario.Contrasena)" />
+        </div>
+
+        <div>
+            <label for="idRol">ID Rol: </label>
+            <InputNumber id="idRol" @bind-Value="nuevoUsuario.IdRol" class="form-control" />
+            <ValidationMessage For="@(() => nuevoUsuario.IdRol)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(resultado))
+{
+    <div class="alert alert-info mt-3">@resultado</div>
+    <p>@nuevoUsuario.Nombre</p>
+    <p>@nuevoUsuario.Correo</p>
+    <p>@nuevoUsuario.IdRol</p>
+
+}
+
+@code {
+    [Parameter]
+    public EventCallback OnUsuarioCreado { get; set; }  
+
+    private Usuario nuevoUsuario = new Usuario();
+    private string resultado = string.Empty;
+
+    private async Task guardarUsuario()
+    {
+        try
+        {
+            bool guardado = await UsuarioServicio.guardarUsuarios(nuevoUsuario);
+            resultado = guardado ? "Usuario guardado correctamente" : "Error al guardar";
+
+            if (guardado)
+            {
+                await OnUsuarioCreado.InvokeAsync(); // Notifica al padre para recargar la lista
+                await Task.Delay(1500);
+                NavigationManager.NavigateTo("/usuarios");
+            }
+        }
+        catch (Exception ex)
+        {
+            resultado = $"Error: {ex.Message}";
+        }
+    }
+}

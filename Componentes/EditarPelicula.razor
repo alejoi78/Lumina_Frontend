@@ -51,6 +51,12 @@
             <InputNumber id="calificacion" @bind-Value="peliculaEditar.Calificacion" class="form-control" step="0.1" />
             <ValidationMessage For="@(() => peliculaEditar.Calificacion)" />
         </div>
+
+        <div>
+            <label for="imagen">Imagen: </label>
+            <InputText id="imagen" @bind-Value="peliculaEditar.Imagen" class="form-control" />
+            <ValidationMessage For="@(() => peliculaEditar.Imagen)" />
+        </div>
     </div>
 
     <button type="submit" class="btn btn-primary">Actualizar</button>
@@ -68,6 +74,7 @@
         <p><strong>Duración:</strong> @peliculaEditar.DuracionHoras horas</p>
         <p><strong>Género:</strong> @peliculaEditar.Genero</p>
         <p><strong>Calificación:</strong> @peliculaEditar.Calificacion</p>
+        <p><strong>Imagen:</strong> @peliculaEditar.Imagen</p>
     </div>
 }
 
@@ -75,7 +82,8 @@
     [Parameter]
     public int Data { get; set; }
     public int IdPelicula { get; set; }
-
+    [Parameter]
+    public EventCallback OnPeliculaActualizada { get; set; }
     private Pelicula peliculaEditar = new Pelicula();
     private string resultado = string.Empty;
 
@@ -96,7 +104,8 @@
                     Link = peliculaExistente.Link,
                     DuracionHoras = peliculaExistente.DuracionHoras,
                     Genero = peliculaExistente.Genero,
-                    Calificacion = peliculaExistente.Calificacion
+                    Calificacion = peliculaExistente.Calificacion,
+                    Imagen = peliculaExistente.Imagen
                 };
         }
     }
@@ -110,6 +119,7 @@
 
             if (actualizado)
             {
+                await OnPeliculaActualizada.InvokeAsync(null);
                 await Task.Delay(1500);
                 NavigationManager.NavigateTo("/peliculas");
             }

@@ -3,115 +3,159 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\series.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\series.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\perfil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\perfil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\negocio\\serienegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:negocio\\serienegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\editarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\editarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\editarserie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\editarserie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\nuevaserie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\nuevaserie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\entidades\\serie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:entidades\\serie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\formularios\\formularioseries.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:formularios\\formularioseries.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\formularios\\formulariologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:formularios\\formulariologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\peliculas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\peliculas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\negocio\\loginnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:negocio\\loginnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\series.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\series.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\editarusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\editarusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\formularios\\formulariopelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:formularios\\formulariopelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\nuevousuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\nuevousuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\usuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\usuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\negocio\\peliculanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:negocio\\peliculanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\nuevousuariologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\nuevousuariologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\nuevaserie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\nuevaserie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\entidades\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:entidades\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\nuevapelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\nuevapelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\editarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\editarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\form1.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\form1.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\formularios\\formulariologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:formularios\\formulariologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\negocio\\loginnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:negocio\\loginnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\entidades\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:entidades\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alejo\\AppData\\Local\\Temp\\.vsdbgsrc\\198bf116f7049a2e3e03f29a33fa5180331819d2741ad4116d0479027e6bf834\\PhysicalFileProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\wwwroot\\imagenes\\img02.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:wwwroot\\imagenes\\img02.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\wwwroot\\imagenes\\img01.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:wwwroot\\imagenes\\img01.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\wwwroot\\imagenes\\img03.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:wwwroot\\imagenes\\img03.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\pages\\perfil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:pages\\perfil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\componentes\\form1.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:componentes\\form1.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\negocio\\peliculanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:negocio\\peliculanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\entidades\\serie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:entidades\\serie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\entidades\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:entidades\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\.gitignore.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:.gitignore.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\negocio\\serienegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:negocio\\serienegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\entidades\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:entidades\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\formularios\\formulariopeliculas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:formularios\\formulariopeliculas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\formularios\\formularioseries.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:formularios\\formularioseries.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\formularios\\formulariousuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:formularios\\formulariousuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|c:\\users\\alejo\\desktop\\lumina_frontend\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD3FB784-7BE9-41B9-B024-1705A0478B75}|BlazorWeb.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alejo\\AppData\\Local\\Temp\\.vsdbgsrc\\198bf116f7049a2e3e03f29a33fa5180331819d2741ad4116d0479027e6bf834\\PhysicalFileProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -120,10 +164,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\ProtectedRoute.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Componentes\\ProtectedRoute.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\AuthorizeRouteView.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AuthorizeRouteView.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -133,7 +173,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -144,45 +184,237 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Perfil.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Perfil.razor",
-              "RelativeDocumentMoniker": "Pages\\Perfil.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Perfil.razor",
-              "RelativeToolTip": "Pages\\Perfil.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-19T00:56:17.876Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T16:02:42.636Z"
+              "WhenOpened": "2025-05-17T16:02:42.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FormularioPelicula.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioPelicula.razor",
-              "RelativeDocumentMoniker": "Formularios\\FormularioPelicula.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioPelicula.razor",
-              "RelativeToolTip": "Formularios\\FormularioPelicula.razor",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "NuevaPelicula.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaPelicula.razor",
+              "RelativeDocumentMoniker": "Componentes\\NuevaPelicula.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaPelicula.razor",
+              "RelativeToolTip": "Componentes\\NuevaPelicula.razor",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T16:34:14.894Z"
+              "WhenOpened": "2025-05-17T16:30:40.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-18T07:11:56.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NuevaSerie.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaSerie.razor",
+              "RelativeDocumentMoniker": "Componentes\\NuevaSerie.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaSerie.razor",
+              "RelativeToolTip": "Componentes\\NuevaSerie.razor",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAFsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T19:55:39.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "Entidades\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T21:33:38.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NuevoUsuarioLogin.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevoUsuarioLogin.razor",
+              "RelativeDocumentMoniker": "Componentes\\NuevoUsuarioLogin.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevoUsuarioLogin.razor",
+              "RelativeToolTip": "Componentes\\NuevoUsuarioLogin.razor",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAiwFQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-20T20:28:20.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditarUsuario.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarUsuario.razor",
+              "RelativeDocumentMoniker": "Componentes\\EditarUsuario.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarUsuario.razor",
+              "RelativeToolTip": "Componentes\\EditarUsuario.razor",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T21:39:38.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Series.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Series.razor",
+              "RelativeDocumentMoniker": "Pages\\Series.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Series.razor",
+              "RelativeToolTip": "Pages\\Series.razor",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwEsAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T20:24:00.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditarSerie.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarSerie.razor",
+              "RelativeDocumentMoniker": "Componentes\\EditarSerie.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarSerie.razor",
+              "RelativeToolTip": "Componentes\\EditarSerie.razor",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T23:54:29.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditarPelicula.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarPelicula.razor",
+              "RelativeDocumentMoniker": "Componentes\\EditarPelicula.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarPelicula.razor",
+              "RelativeToolTip": "Componentes\\EditarPelicula.razor",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAuwHkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T00:30:39.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Peliculas.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Peliculas.razor",
+              "RelativeDocumentMoniker": "Pages\\Peliculas.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Peliculas.razor",
+              "RelativeToolTip": "Pages\\Peliculas.razor",
+              "ViewState": "AgIAADgAAAAAAAAAAAAkwEcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:39:16.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-17T16:26:14.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Usuarios.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Usuarios.razor",
+              "RelativeDocumentMoniker": "Pages\\Usuarios.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Usuarios.razor",
+              "RelativeToolTip": "Pages\\Usuarios.razor",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwE8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T21:53:07.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NuevoUsuario.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevoUsuario.razor",
+              "RelativeDocumentMoniker": "Componentes\\NuevoUsuario.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevoUsuario.razor",
+              "RelativeToolTip": "Componentes\\NuevoUsuario.razor",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T21:39:27.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T20:39:09.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Home.razor",
+              "RelativeToolTip": "Pages\\Home.razor",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAwAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:46:12.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\LoginNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\LoginNegocio.cs",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\LoginNegocio.cs",
+              "RelativeToolTip": "Negocio\\LoginNegocio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T17:48:02.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "Pages\\Login.razor",
@@ -195,141 +427,205 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\App.razor",
-              "RelativeDocumentMoniker": "App.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\App.razor",
-              "RelativeToolTip": "App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T20:39:09.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SerieNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\SerieNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\SerieNegocio.cs",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\SerieNegocio.cs",
-              "RelativeToolTip": "Negocio\\SerieNegocio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T19:56:04.326Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormularioSeries.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioSeries.razor",
-              "RelativeDocumentMoniker": "Formularios\\FormularioSeries.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioSeries.razor",
-              "RelativeToolTip": "Formularios\\FormularioSeries.razor",
-              "ViewState": "AgIAACIAAAAAAAAAAAAuwEkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T20:30:48.406Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Serie.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Serie.cs",
-              "RelativeDocumentMoniker": "Entidades\\Serie.cs",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Serie.cs",
-              "RelativeToolTip": "Entidades\\Serie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T19:52:01.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NuevaSerie.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaSerie.razor",
-              "RelativeDocumentMoniker": "Componentes\\NuevaSerie.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaSerie.razor",
-              "RelativeToolTip": "Componentes\\NuevaSerie.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T19:55:39.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Home.razor",
-              "RelativeToolTip": "Pages\\Home.razor",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T16:46:12.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "wwwroot\\index.html",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
-              "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-18T07:11:56.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Series.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Series.razor",
-              "RelativeDocumentMoniker": "Pages\\Series.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Series.razor",
-              "RelativeToolTip": "Pages\\Series.razor",
-              "ViewState": "AgIAACwAAAAAAAAAAAAuwEkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T20:24:00.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "PeliculaNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\PeliculaNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\PeliculaNegocio.cs",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\PeliculaNegocio.cs",
-              "RelativeToolTip": "Negocio\\PeliculaNegocio.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwD8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T16:15:48.368Z"
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:47:08.451Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "wwwroot\\css\\app.css",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAwIcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-18T07:11:18.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "FormularioLogin.razor",
               "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioLogin.razor",
               "RelativeDocumentMoniker": "Formularios\\FormularioLogin.razor",
               "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioLogin.razor",
               "RelativeToolTip": "Formularios\\FormularioLogin.razor",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAF4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T07:51:54.776Z"
+              "WhenOpened": "2025-05-18T07:51:54.776Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EditarSerie.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarSerie.razor",
-              "RelativeDocumentMoniker": "Componentes\\EditarSerie.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarSerie.razor",
-              "RelativeToolTip": "Componentes\\EditarSerie.razor",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAowIEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T23:54:29.2Z"
+              "DocumentIndex": 23,
+              "Title": "img03.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [341x387, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img03.png",
+              "RelativeDocumentMoniker": "wwwroot\\imagenes\\img03.png",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img03.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [341x387, 32 bits, PNG]",
+              "RelativeToolTip": "wwwroot\\imagenes\\img03.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [341x387, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-20T19:13:57.195Z",
+              "EditorCaption": " -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [341x387, 32 bits, PNG]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
+              "Title": "bootstrap-grid.css.map",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABIsgEAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-20T18:46:39.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "img01.jpg -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1200x675, 24 bits, JPG]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img01.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\imagenes\\img01.jpg",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img01.jpg -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1200x675, 24 bits, JPG]",
+              "RelativeToolTip": "wwwroot\\imagenes\\img01.jpg -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1200x675, 24 bits, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-20T18:26:45.791Z",
+              "EditorCaption": " -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1200x675, 24 bits, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "img02.jpg -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1400x700, 24 bits, JPG]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img02.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\imagenes\\img02.jpg",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\imagenes\\img02.jpg -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1400x700, 24 bits, JPG]",
+              "RelativeToolTip": "wwwroot\\imagenes\\img02.jpg -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1400x700, 24 bits, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-20T19:13:19.717Z",
+              "EditorCaption": " -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - Bitmap [1400x700, 24 bits, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PeliculaNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\PeliculaNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\PeliculaNegocio.cs",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\PeliculaNegocio.cs",
+              "RelativeToolTip": "Negocio\\PeliculaNegocio.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwEwAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T16:15:48.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Pelicula.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Pelicula.cs",
+              "RelativeDocumentMoniker": "Entidades\\Pelicula.cs",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Pelicula.cs",
+              "RelativeToolTip": "Entidades\\Pelicula.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T16:06:22.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Perfil.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Perfil.razor",
+              "RelativeDocumentMoniker": "Pages\\Perfil.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Perfil.razor",
+              "RelativeToolTip": "Pages\\Perfil.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T00:56:17.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Form1.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\Form1.razor",
+              "RelativeDocumentMoniker": "Componentes\\Form1.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\Form1.razor",
+              "RelativeToolTip": "Componentes\\Form1.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:29:38.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Serie.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Serie.cs",
+              "RelativeDocumentMoniker": "Entidades\\Serie.cs",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Serie.cs",
+              "RelativeToolTip": "Entidades\\Serie.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T19:52:01.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": ".gitignore.txt",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\.gitignore.txt",
+              "RelativeDocumentMoniker": ".gitignore.txt",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\.gitignore.txt",
+              "RelativeToolTip": ".gitignore.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-20T03:34:23.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UsuarioNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\UsuarioNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\UsuarioNegocio.cs",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\UsuarioNegocio.cs",
+              "RelativeToolTip": "Negocio\\UsuarioNegocio.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwEEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T21:37:24.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "FormularioPeliculas.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioPeliculas.razor",
+              "RelativeDocumentMoniker": "Formularios\\FormularioPeliculas.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioPeliculas.razor",
+              "RelativeToolTip": "Formularios\\FormularioPeliculas.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:34:14.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SerieNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\SerieNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\SerieNegocio.cs",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\SerieNegocio.cs",
+              "RelativeToolTip": "Negocio\\SerieNegocio.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAswE0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T19:56:04.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Login.cs",
               "RelativeDocumentMoniker": "Entidades\\Login.cs",
@@ -341,31 +637,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoginNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\LoginNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\LoginNegocio.cs",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Negocio\\LoginNegocio.cs",
-              "RelativeToolTip": "Negocio\\LoginNegocio.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAuwDgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T17:48:02.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAUwCsAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 35,
+              "Title": "FormularioSeries.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioSeries.razor",
+              "RelativeDocumentMoniker": "Formularios\\FormularioSeries.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioSeries.razor",
+              "RelativeToolTip": "Formularios\\FormularioSeries.razor",
+              "ViewState": "AgIAACIAAAAAAAAAAAAuwEkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T16:47:08.451Z"
+              "WhenOpened": "2025-05-17T20:30:48.406Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 36,
+              "Title": "FormularioUsuarios.razor",
+              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioUsuarios.razor",
+              "RelativeDocumentMoniker": "Formularios\\FormularioUsuarios.razor",
+              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Formularios\\FormularioUsuarios.razor",
+              "RelativeToolTip": "Formularios\\FormularioUsuarios.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T21:35:17.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\_Imports.razor",
               "RelativeDocumentMoniker": "_Imports.razor",
@@ -377,91 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Peliculas.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Peliculas.razor",
-              "RelativeDocumentMoniker": "Pages\\Peliculas.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Peliculas.razor",
-              "RelativeToolTip": "Pages\\Peliculas.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T16:39:16.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "Pages\\Counter.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Pages\\Counter.razor",
-              "RelativeToolTip": "Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T16:43:20.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EditarPelicula.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarPelicula.razor",
-              "RelativeDocumentMoniker": "Componentes\\EditarPelicula.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\EditarPelicula.razor",
-              "RelativeToolTip": "Componentes\\EditarPelicula.razor",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T00:30:39.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Form1.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\Form1.razor",
-              "RelativeDocumentMoniker": "Componentes\\Form1.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\Form1.razor",
-              "RelativeToolTip": "Componentes\\Form1.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T16:29:38.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "NuevaPelicula.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaPelicula.razor",
-              "RelativeDocumentMoniker": "Componentes\\NuevaPelicula.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\NuevaPelicula.razor",
-              "RelativeToolTip": "Componentes\\NuevaPelicula.razor",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T16:30:40.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\css\\app.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\app.css",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\css\\app.css",
-              "RelativeToolTip": "wwwroot\\css\\app.css",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAC8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-18T07:11:18.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Pelicula.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Pelicula.cs",
-              "RelativeDocumentMoniker": "Entidades\\Pelicula.cs",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Entidades\\Pelicula.cs",
-              "RelativeToolTip": "Entidades\\Pelicula.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T16:06:22.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 40,
               "Title": "ProtectedRoute.razor",
               "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Componentes\\ProtectedRoute.razor",
               "RelativeDocumentMoniker": "Componentes\\ProtectedRoute.razor",
@@ -473,19 +685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AuthorizeRouteView.razor",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\AuthorizeRouteView.razor",
-              "RelativeDocumentMoniker": "AuthorizeRouteView.razor",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\AuthorizeRouteView.razor",
-              "RelativeToolTip": "AuthorizeRouteView.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T17:58:42.57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 39,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
@@ -497,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "PhysicalFileProvider.cs",
               "DocumentMoniker": "C:\\Users\\Alejo\\AppData\\Local\\Temp\\.vsdbgsrc\\198bf116f7049a2e3e03f29a33fa5180331819d2741ad4116d0479027e6bf834\\PhysicalFileProvider.cs",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\198bf116f7049a2e3e03f29a33fa5180331819d2741ad4116d0479027e6bf834\\PhysicalFileProvider.cs",
@@ -506,18 +706,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T06:49:06.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-17T16:26:14.025Z"
             }
           ]
         }

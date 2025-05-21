@@ -1,75 +1,84 @@
-﻿@using BlazorWeb.Entidades
-
-<div class="d-flex justify-content-center align-items-center" style="height: 100vh; width: 100%;background: #15171E">
-    <div class="col-xl-10" style="max-width: 900px;">
-        <div class="card rounded-3 text-black">
+﻿<div class="login-container">
+    <div class="login-wrapper">
+        <div class="login-card">
             <div class="row g-0">
-                <div class="col-lg-6">
-                    <div class="card-body p-md-5 mx-md-4">
+                <!-- Renderizado condicional -->
+                @if (mostrarLogin)
+                {
+                    <!-- Columna del formulario -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="login-form">
+                            <div class="text-center mb-4">
+                                <img src="/imagenes/logo.png"
+                                     class="login-logo"
+                                     alt="logo" style="width: 70%">
+                            </div>
 
-                        <div class="text-center">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                            style="width: 185px;" alt="logo">
-                            <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                            <EditForm Model="@login" OnValidSubmit="ProcesarLogin">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+
+                                <p class="login-subtitle mb-1">Por favor introduce tus datos</p>
+                                <p class="login-subtitle" style="font-size:10px">Usuario administrador de ejemplo: Correo: admin@example.com Contraseña: admin123</p>
+
+                                <div class="form-group mb-3">
+                                    <InputText @bind-Value="login.Nombre" class="form-control" placeholder="Correo" />
+                                    <ValidationMessage For="@(() => login.Nombre)" />
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <InputText @bind-Value="login.Contrasena" type="password" class="form-control" placeholder="Contraseña" />
+                                    <ValidationMessage For="@(() => login.Contrasena)" />
+                                </div>
+
+                                <div class="text-center mb-4">
+                                    <button class="btn btn-primary login-btn" type="submit" disabled="@isLoading">
+                                        @if (isLoading)
+                                        {
+                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Loading...</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Ingresar</span>
+                                        }
+                                    </button>
+                                </div>
+
+                                <div class="text-center mt-2">
+                                    <p class="d-inline me-2">No tienes cuenta?</p>
+                                    <button type="button" @onclick="MostrarRegistro" class="btn btn-outline-success btn-sm">Crear nueva</button>
+                                </div>
+
+                                @if (!string.IsNullOrEmpty(mensaje))
+                                {
+                                    <div class="alert alert-info mt-3">@mensaje</div>
+                                }
+                            </EditForm>
                         </div>
-
-                        <EditForm Model="@login" OnValidSubmit="ProcesarLogin">
-                            <DataAnnotationsValidator />
-                            <ValidationSummary />
-
-                            <p>Please login to your account</p>
-
-                            <div class="form-outline mb-4">
-                                <InputText id="nombre" @bind-Value="login.Nombre" class="form-control" placeholder="Phone number or email address" />
-                                <label class="form-label" for="nombre">Username</label>
-                                <ValidationMessage For="@(() => login.Nombre)" />
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <InputText id="contrasena" @bind-Value="login.Contrasena" type="password" class="form-control" />
-                                <label class="form-label" for="contrasena">Password</label>
-                                <ValidationMessage For="@(() => login.Contrasena)" />
-                            </div>
-
-                            <div class="text-center pt-1 mb-5 pb-1">
-                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
-                                    Log in
-                                </button>
-                            </div>
-
-                            <div class="d-flex align-items-center justify-content-center pb-4">
-                                <p class="mb-0 me-2">Don't have an account?</p>
-                                <button type="button" class="btn btn-outline-danger">Create new</button>
-                            </div>
-
-                            @if (!string.IsNullOrEmpty(mensaje))
-                            {
-                                <div class="alert alert-info mt-3">@mensaje</div>
-                            }
-
-                        </EditForm>
-
                     </div>
-                </div>
-                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                        <h4 class="mb-4">We are more than just a company</h4>
-                        <p class="small mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua...
-                        </p>
+                }
+                else
+                {
+                    <!-- Mostrar componente NuevoUsuario -->
+                    <div class="col-lg-6 col-md-12">
+                        <NuevoUsuarioLogin OnRegistroCompleto="VolverALogin" />
                     </div>
+                }
+
+                <!-- Columna de la imagen/descripción (oculta en móviles) -->
+                <div class="col-lg-6 d-none d-lg-flex login-info">
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
 @code {
     private Login login = new Login();
     private string mensaje = string.Empty;
     private bool isLoading = false;
+    private bool mostrarLogin = true; // Controla qué componente mostrar
 
     [Inject]
     private LoginNegocio LoginService { get; set; }
@@ -86,12 +95,9 @@
 
         if (!string.IsNullOrEmpty(resultado?.Token))
         {
-            Console.WriteLine(resultado?.Token);
             await LoginService.GuardarTokenAsync("token", resultado?.Token);
-            // Login exitoso
             mensaje = "Login exitoso. Bienvenido, " + resultado.Nombre;
-            // Redirige a otra página
-            NavigationManager.NavigateTo("/"); // cambia esta ruta según tu app
+            NavigationManager.NavigateTo("/");
         }
         else
         {
@@ -99,5 +105,16 @@
         }
 
         isLoading = false;
+    }
+
+    private void MostrarRegistro()
+    {
+        mostrarLogin = false;
+    }
+
+    private void VolverALogin()
+    {
+        mostrarLogin = true;
+        mensaje = "Registro completado. Por favor inicia sesión.";
     }
 }

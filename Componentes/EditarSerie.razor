@@ -56,6 +56,12 @@
             <InputNumber id="calificacion" @bind-Value="serieEditar.Calificacion" class="form-control" step="0.1" />
             <ValidationMessage For="@(() => serieEditar.Calificacion)" />
         </div>
+
+        <div>
+            <label for="imagen">Imagen: </label>
+            <InputText id="imagen" @bind-Value="serieEditar.Imagen" class="form-control" />
+            <ValidationMessage For="@(() => serieEditar.Imagen)" />
+        </div>
     </div>
 
     <button type="submit" class="btn btn-primary">Actualizar</button>
@@ -74,6 +80,7 @@
         <p><strong>Duración por capítulo:</strong> @serieEditar.DuracionPorCapitulo min</p>
         <p><strong>Género:</strong> @serieEditar.Genero</p>
         <p><strong>Calificación:</strong> @serieEditar.Calificacion</p>
+        <p><strong>Imagen:</strong> @serieEditar.Imagen</p>
     </div>
 }
 
@@ -104,7 +111,8 @@
                     Temporadas = serieExistente.Temporadas,
                     DuracionPorCapitulo = serieExistente.DuracionPorCapitulo,
                     Genero = serieExistente.Genero,
-                    Calificacion = serieExistente.Calificacion
+                    Calificacion = serieExistente.Calificacion,
+                    Imagen = serieExistente.Imagen
                 };
         }
     }

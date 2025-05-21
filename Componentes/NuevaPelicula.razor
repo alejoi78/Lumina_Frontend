@@ -49,6 +49,14 @@
             <InputNumber id="calificacion" @bind-Value="nuevaPelicula.Calificacion" class="form-control" step="0.1" />
             <ValidationMessage For="@(() => nuevaPelicula.Calificacion)" />
         </div>
+
+        <div>
+            <label for="imagen">Imagen: </label>
+            <InputText id="imagen" @bind-Value="nuevaPelicula.Imagen" class="form-control" />
+            <ValidationMessage For="@(() => nuevaPelicula.Imagen)" />
+        </div>
+
+
     </div>
 
     <button type="submit" class="btn btn-primary">Guardar</button>
@@ -64,25 +72,27 @@
     <p>@nuevaPelicula.DuracionHoras</p>
     <p>@nuevaPelicula.Genero</p>
     <p>@nuevaPelicula.Calificacion</p>
+    <p>@nuevaPelicula.Imagen</p>
 }
 
 @code {
     private Pelicula nuevaPelicula = new Pelicula();
     private string resultado = string.Empty;
+    [Parameter]
+    public EventCallback OnPeliculaCreada { get; set; }
 
     private async Task guardarPeliculas()
     {
         try
         {
-
             bool guardado = await PeliculaServicio.guardarPelicula(nuevaPelicula);
             resultado = guardado ? "Película guardada correctamente" : "Error al guardar";
            
-
             if (guardado)
             {
-                await Task.Delay(1500); // Espera 1.5 segundos
-                NavigationManager.NavigateTo("/peliculas"); // Redirige
+                await OnPeliculaCreada.InvokeAsync(); // Notifica al padre
+                await Task.Delay(1500);
+                NavigationManager.NavigateTo("/peliculas");
             }
         }
         catch (Exception ex)

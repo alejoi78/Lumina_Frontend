@@ -13,7 +13,8 @@ namespace BlazorWeb.Entidades
         public string Link { get; set; } = string.Empty;
         public double DuracionHoras { get; set; }
         public string Genero { get; set; } = string.Empty;
-        public double Calificacion { get; set; } 
+        public double Calificacion { get; set; }
+        public string Imagen { get; set; } = string.Empty;
 
     }
 }

@@ -3,55 +3,87 @@
 @using BlazorWeb.Negocio
 @inject SerieNegocio SerieNegocio
 
-<h3>Listar Series</h3>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0">
+            <i class="bi bi-collection-play me-2"></i>Listado de Series
+        </h3>
+    </div>
 
-@if (series == null)
-{
-    <p><em>No se pudo acceder a la base de datos</em></p>
-}
-else if (series.Count == 0)
-{
-    <p><em>No hay series disponibles.</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>IdSerie</th>
-                <th>Título</th>
-                <th>Director</th>
-                <th>Temporadas</th>
-                <th>Duración por Capítulo</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var serie in series)
-            {
-                <tr>
-                    <td>@serie.IdSerie</td>
-                    <td>@serie.Titulo</td>
-                    <td>@serie.Director</td>
-                    <td>@serie.Temporadas</td>
-                    <td>@serie.DuracionPorCapitulo min</td>
-                    <td>
-                        <button class="btn btn-primary" @onclick="() => EditarSerie(serie.IdSerie)">Editar</button>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+    @if (series == null)
+    {
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <div>No se pudo acceder a la base de datos</div>
+        </div>
+    }
+    else if (series.Count == 0)
+    {
+        <div class="alert alert-info d-flex align-items-center" role="alert">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <div>No hay series disponibles.</div>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive rounded-3 shadow-sm">
+            <table class="table table-hover table-bordered bg-white mb-0">
+                <thead style="background-color: #bdbdbd; color: white;">
+                    <tr>
+                        <th scope="col" class="text-center">ID</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Director</th>
+                        <th scope="col" class="text-center">Temporadas</th>
+                        <th scope="col" class="text-center">Duración</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var serie in series)
+                    {
+                        <tr>
+                            <td class="text-center">@serie.IdSerie</td>
+                            <td>@serie.Titulo</td>
+                            <td>@serie.Director</td>
+                            <td class="text-center">@serie.Temporadas</td>
+                            <td class="text-center">@serie.DuracionPorCapitulo min</td>
+                            <td class="text-center">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-sm btn-outline-primary"
+                                            @onclick="() => EditarSerie(serie.IdSerie)"
+                                            title="Editar serie">
+                                        <i class="bi bi-pencil-square"></i> Editar
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger"
+                                            @onclick="() => ConfirmarEliminacion(serie.IdSerie)"
+                                            title="Eliminar serie">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
 
-@if (esEdicion)
-{
-    <EditarSerie Data="@serieClickeada" />
-}
-else
-{
-    <NuevaSerie />
-}
+    <div class="d-flex justify-content-center mt-5 mb-5">
+        <div class="card" style="width: 80%;">
+            <div class="card-body">
+                @if (esEdicion)
+                {
+                    <EditarSerie Data="@serieClickeada" OnSerieActualizada="CargarSeries" />
+                }
+                else
+                {
+                    <NuevaSerie OnSerieCreada="CargarSeries" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @code {
     private List<Serie> series = new List<Serie>();
@@ -80,5 +112,31 @@ else
     {
         nuevaSerie = new Serie();
         esEdicion = false;
+    }
+
+    private async Task eliminarSerie(int idSerie)
+    {
+        try
+        {
+            bool eliminado = await SerieNegocio.eliminarSerie(idSerie);
+            if (eliminado)
+            {
+                await CargarSeries();
+                Console.WriteLine("Serie eliminado correctamente");
+            }
+            else
+            {
+                Console.WriteLine("No se pudo eliminar la serie");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al eliminar la serie: {ex.Message}");
+        }
+    }
+
+    private async Task ConfirmarEliminacion(int idSerie)
+    {
+        await eliminarSerie(idSerie);
     }
 }

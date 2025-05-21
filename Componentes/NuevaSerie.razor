@@ -57,6 +57,12 @@
             <InputNumber id="calificacion" @bind-Value="nuevaSerie.Calificacion" class="form-control" step="0.1" />
             <ValidationMessage For="@(() => nuevaSerie.Calificacion)" />
         </div>
+
+        <div>
+            <label for="imagen">Imagen: </label>
+            <InputText id="imagen" @bind-Value="nuevaSerie.Imagen" class="form-control" />
+            <ValidationMessage For="@(() => nuevaSerie.Imagen)" />
+        </div>
     </div>
 
     <button type="submit" class="btn btn-primary">Guardar</button>
@@ -73,9 +79,13 @@
     <p>@nuevaSerie.DuracionPorCapitulo</p>
     <p>@nuevaSerie.Genero</p>
     <p>@nuevaSerie.Calificacion</p>
+    <p>@nuevaSerie.Imagen</p>
 }
 
 @code {
+    [Parameter]
+    public EventCallback OnSerieCreada { get; set; }  // Parámetro para comunicación con el padre
+
     private Serie nuevaSerie = new Serie();
     private string resultado = string.Empty;
 
@@ -88,8 +98,9 @@
 
             if (guardado)
             {
-                await Task.Delay(1500); // Espera 1.5 segundos
-                NavigationManager.NavigateTo("/series"); // Redirige
+                await OnSerieCreada.InvokeAsync(); // Notifica al padre para recargar la lista
+                await Task.Delay(1500);
+                NavigationManager.NavigateTo("/series");
             }
         }
         catch (Exception ex)
