@@ -1,0 +1,38 @@
+﻿@page "/usuarios-json"
+@using BlazorWeb.Entidades
+@using BlazorWeb.Negocio
+@inject UsuarioNegocio UsuarioNegocio
+@inject IJSRuntime JSRuntime
+
+<h3>Mostrar Usuarios como JSON en Consola</h3>
+
+<button class="btn btn-primary" @onclick="MostrarUsuariosEnConsola">
+    Mostrar JSON en Consola
+</button>
+
+@code {
+    private List<Usuario> usuarios = new List<Usuario>();  // Cambia a UsuarioConRol
+
+    protected override async Task OnInitializedAsync()
+    {
+        usuarios = await UsuarioNegocio.listarUsuarios();  // Usa el método correcto
+    }
+
+    private async Task MostrarUsuariosEnConsola()
+    {
+        try
+        {
+            var json = System.Text.Json.JsonSerializer.Serialize(
+                usuarios,
+                new System.Text.Json.JsonSerializerOptions { WriteIndented = true }
+            );
+
+            await JSRuntime.InvokeVoidAsync("console.log", "Datos de usuarios:");
+            await JSRuntime.InvokeVoidAsync("console.log", json);
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("console.error", $"Error: {ex.Message}");
+        }
+    }
+}

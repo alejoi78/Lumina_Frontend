@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
+      "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\css\\video-js.css",
+      "PackagePath": "staticwebassets\\css\\video-js.css"
+    },
+    {
       "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\js\\video.js",
+      "PackagePath": "staticwebassets\\js\\video.js"
     },
     {
       "Id": "C:\\Users\\Alejo\\Desktop\\Lumina_Frontend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

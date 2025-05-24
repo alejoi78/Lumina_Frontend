@@ -29,10 +29,7 @@
             <ValidationMessage For="@(() => nuevoUsuario.Contrasena)" />
         </div>
 
-        <div style="color: white">
-            <InputNumber id="idRol" @bind-Value="nuevoUsuario.IdRol" class="form-control" placeholder="ID Rol"/>
-            <ValidationMessage For="@(() => nuevoUsuario.IdRol)" />
-        </div>
+
 
         <div class="text-center mb-4">
             <button type="submit" class="btn btn-primary login-btn mt-3" disabled="@isLoading">
@@ -63,7 +60,7 @@
 </div>
 
 @code {
-    private Usuario nuevoUsuario = new Usuario();
+    private Usuario nuevoUsuario = new Usuario() { IdRol = 2 };
     private string resultado = string.Empty;
     private bool isLoading = false;
 

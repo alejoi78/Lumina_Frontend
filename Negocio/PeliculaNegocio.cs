@@ -36,6 +36,28 @@ namespace BlazorWeb.Negocio
             }
         }
 
+        public async Task<Pelicula> obtenerPorId(int idPelicula)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"{_baseApiUrl}/obtenerPorId?id={idPelicula}");
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    _logger.LogError($"Error al obtener película. Código de estado: {response.StatusCode}");
+                    return null;
+                }
+
+                return await response.Content.ReadFromJsonAsync<Pelicula>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error al obtener película con ID: {idPelicula}");
+                return null;
+            }
+        }
+
+
         public async Task<bool> guardarPelicula(Pelicula pelicula)
         {
             try

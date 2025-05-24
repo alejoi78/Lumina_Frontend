@@ -1,4 +1,5 @@
 wwwroot\css\app.css
+wwwroot\css\video-js.css
 wwwroot\icon-192.png
 wwwroot\imagenes\img01.jpg
 wwwroot\imagenes\img02.jpg
@@ -6,6 +7,7 @@ wwwroot\imagenes\img03.png
 wwwroot\imagenes\img05.png
 wwwroot\imagenes\logo.png
 wwwroot\index.html
+wwwroot\js\video.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

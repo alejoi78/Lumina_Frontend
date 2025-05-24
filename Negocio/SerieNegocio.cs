@@ -35,6 +35,28 @@ namespace BlazorWeb.Negocio
             }
         }
 
+        public async Task<Serie> obtenerPorId(int idSerie)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"{_baseApiUrl}/obtenerPorId?id={idSerie}");
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    _logger.LogError($"Error al obtener serie. Código de estado: {response.StatusCode}");
+                    return null;
+                }
+
+                return await response.Content.ReadFromJsonAsync<Serie>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error al obtener serie con ID: {idSerie}");
+                return null;
+            }
+        }
+
+
         public async Task<bool> guardarSerie(Serie serie)
         {
             try

@@ -7,31 +7,31 @@
     @inject IJSRuntime JS
 
 
-    <PageTitle>Home</PageTitle>
+<PageTitle>Home</PageTitle>
 
-    <!-- Carrusel -->
-    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+<!-- Carrusel -->
+<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
 
-        <div class="carousel-inner">
-            <div class="carousel-item active c-item">
-                <img src="/imagenes/img02.jpg" class="d-block w-100 c-img" alt="Slide 1">
+    <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+            <img src="/imagenes/img02.jpg" class="d-block w-100 c-img" alt="Slide 1">
             <div class="carousel-caption d-flex flex-column justify-content-center align-items-center top-0 start-50 translate-middle-x text-center">
                 <p class="fs-3 text-uppercase">SIENTE LA EMOCIÓN</p>
                 <h1 class="display-1 fw-bolder text-capitalize">Vive cada escena</h1>
             </div>
 
-            </div>
-            <div class="carousel-item c-item">
+        </div>
+        <div class="carousel-item c-item">
             <img src="/imagenes/img01.jpg" class="d-block w-100 c-img" alt="Slide 2">
-                <div class="carousel-caption top-0 mt-4">
+            <div class="carousel-caption top-0 mt-4">
                 <img src="/imagenes/logo.png" alt="Alternate Text" />
-                </div>
             </div>
+        </div>
         <div class="carousel-item c-item">
             <img src="https://i.imgur.com/pymgzHB.jpeg" class="d-block w-100 c-img" alt="Slide 3">
             <div class="carousel-caption top-0 mt-4">
@@ -40,49 +40,49 @@
             </div>
         </div>
 
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-    <!-- Sección de Contenido Aleatorio -->
-    <div class="container mt-5">
-        <h2 class="mb-4 d-flex align-items-center">
-            <i class="bi bi-collection-play me-2"></i> Recomendaciones
-        </h2>
+<!-- Sección de Contenido Aleatorio -->
+<div class="container mt-5">
+    <h2 class="mb-4 d-flex align-items-center">
+        <i class="bi bi-collection-play me-2"></i> Recomendaciones
+    </h2>
 
-        @if (contenidoAleatorio == null)
-        {
-            <div class="text-center my-5">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
+    @if (contenidoAleatorio == null)
+    {
+        <div class="text-center my-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
-        }
-        else if (contenidoAleatorio.Count == 0)
-        {
-            <div class="alert alert-info">
-                No hay contenido disponible
-            </div>
-        }
-        else
-        {
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
-                @foreach (var item in contenidoAleatorio)
-                {
-                    <div class="col">
-                        <div class="content-card" @onclick="() => IrALink(item.Link)">
-                            <div class="content-card-inner">
-                                <div class="content-card-front" style="height: 100%">
-                                    @if (!string.IsNullOrEmpty(item.Imagen))
-                                    {
-                                        @if (item.Imagen.StartsWith("http"))
+        </div>
+    }
+    else if (contenidoAleatorio.Count == 0)
+    {
+        <div class="alert alert-info">
+            No hay contenido disponible
+        </div>
+    }
+    else
+    {
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
+            @foreach (var item in contenidoAleatorio)
+            {
+                <div class="col">
+                    <div class="content-card" @onclick="() => IrAVer(item.Id, item.EsPelicula)">
+                        <div class="content-card-inner">
+                            <div class="content-card-front" style="height: 100%">
+                                @if (!string.IsNullOrEmpty(item.Imagen))
+                                {
+                                    @if (item.Imagen.StartsWith("http"))
                                         {
                                             <img src="@item.Imagen" class="content-poster" alt="@item.Titulo" />
                                         }
@@ -324,13 +324,11 @@
             .ToList();
         }
 
-        private async Task IrALink(string link)
-        {
-            if (!string.IsNullOrEmpty(link) && Uri.IsWellFormedUriString(link, UriKind.Absolute))
-            {
-                await JS.InvokeVoidAsync("open", link, "_blank");
-            }
-        }
+    private void IrAVer(int id, bool esPelicula)
+    {
+        NavigationManager.NavigateTo($"/ver/{(esPelicula ? "pelicula" : "serie")}/{id}");
+    }
+
 
 
         private class Contenido

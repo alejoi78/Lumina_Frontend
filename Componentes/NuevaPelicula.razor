@@ -2,6 +2,9 @@
 @using BlazorWeb.Negocio
 @inject PeliculaNegocio PeliculaServicio
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+@inject HttpClient Http
+@using System.Text.Json;
 
 <h1>Nueva Película</h1>
 
@@ -29,11 +32,6 @@
         </div>
 
         <div>
-            <label for="link">Enlace (Link): </label>
-            <InputText id="link" @bind-Value="nuevaPelicula.Link" class="form-control" />
-            <ValidationMessage For="@(() => nuevaPelicula.Link)" />
-        </div>
-        <div>
             <label for="duracionhoras">DuracionHoras: </label>
             <InputNumber id="duracionhoras" @bind-Value="nuevaPelicula.DuracionHoras" class="form-control" step="0.1" />
             <ValidationMessage For="@(() => nuevaPelicula.DuracionHoras)" />
@@ -50,16 +48,37 @@
             <ValidationMessage For="@(() => nuevaPelicula.Calificacion)" />
         </div>
 
-        <div>
-            <label for="imagen">Imagen: </label>
-            <InputText id="imagen" @bind-Value="nuevaPelicula.Imagen" class="form-control" />
-            <ValidationMessage For="@(() => nuevaPelicula.Imagen)" />
+        <!-- Input para imagen (oculto) -->
+        <InputFile id="inputImagen" style="display:none" OnChange="OnInputFileChangeImagen" accept="image/*" />
+
+        <!-- Input para video (oculto) -->
+        <InputFile id="inputVideo" style="display:none" OnChange="OnInputFileChangeVideo" accept="video/*" />
+
+        <!-- Botones para activar los inputs -->
+        <div class="mb-3 mt-3">
+            <label>Imagen: </label>
+            <button type="button" class="btn btn-outline-secondary" @onclick="AbrirInputFileImagen">
+                Seleccionar imagen
+            </button>
+            @if (!string.IsNullOrEmpty(NombreArchivoImagen))
+            {
+                <span class="ml-2">@NombreArchivoImagen</span>
+            }
         </div>
 
-
+        <div class="mb-3 mt-3">
+            <label>Video: </label>
+            <button type="button" class="btn btn-outline-secondary" @onclick="AbrirInputFileVideo">
+                Seleccionar video
+            </button>
+            @if (!string.IsNullOrEmpty(NombreArchivoVideo))
+            {
+                <span class="ml-2">@NombreArchivoVideo</span>
+            }
+        </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="submit" class="btn btn-primary mt-4">Guardar</button>
 </EditForm>
 
 @if (!string.IsNullOrEmpty(resultado))
@@ -76,18 +95,42 @@
 }
 
 @code {
-    private Pelicula nuevaPelicula = new Pelicula();
+    private Pelicula nuevaPelicula = new Pelicula() { Link = "oepai" };
     private string resultado = string.Empty;
     [Parameter]
     public EventCallback OnPeliculaCreada { get; set; }
+
+    // Variables para el video
+    private IBrowserFile ArchivoVideo;
+    private string NombreArchivoVideo = string.Empty;
+    private string videoUrl = "";
+
+    // Variables para la imagen
+    private IBrowserFile ArchivoImagen;
+    private string NombreArchivoImagen = string.Empty;
+    private string imagenUrl = "";
 
     private async Task guardarPeliculas()
     {
         try
         {
+            // Subir imagen primero
+            await GuardarImagen();
+            if (!string.IsNullOrEmpty(imagenUrl))
+            {
+                nuevaPelicula.Imagen = imagenUrl;
+            }
+
+            // Subir video después
+            await GuardarVideo();
+            if (!string.IsNullOrEmpty(videoUrl))
+            {
+                nuevaPelicula.Link = videoUrl;
+            }
+
             bool guardado = await PeliculaServicio.guardarPelicula(nuevaPelicula);
             resultado = guardado ? "Película guardada correctamente" : "Error al guardar";
-           
+
             if (guardado)
             {
                 await OnPeliculaCreada.InvokeAsync(); // Notifica al padre
@@ -100,4 +143,102 @@
             resultado = $"Error: {ex.Message}";
         }
     }
+
+    // Métodos para el video
+    private async Task AbrirInputFileVideo()
+    {
+        await JS.InvokeVoidAsync("abrirInputFile", "inputVideo");
+    }
+
+    private async Task OnInputFileChangeVideo(InputFileChangeEventArgs e)
+    {
+        ArchivoVideo = e.File;
+        NombreArchivoVideo = ArchivoVideo.Name;
+        StateHasChanged();
+    }
+
+    private async Task GuardarVideo()
+    {
+        if (ArchivoVideo == null)
+            return;
+
+        var formData = new MultipartFormDataContent();
+        var streamContent = new StreamContent(ArchivoVideo.OpenReadStream(maxAllowedSize: 150 * 1024 * 1024)); // 150 MB
+
+        streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(ArchivoVideo.ContentType);
+        formData.Add(streamContent, "file", ArchivoVideo.Name);
+
+        // Cambia esta URL por la tuya
+        var url = "http://localhost:5050/api/file/file/InventarioEquiposComputo/SW52ZW50YXJpb0VxdXBvc2RlQ29tcHV0bw===&RGVzYXJvbGluZw==&UmFpei==&SW1hZ2VuRXh0ZW5zaW9u";
+
+        var response = await Http.PutAsync(url, formData);
+        var responseContent = await response.Content.ReadAsStringAsync();
+        var jsonDoc = JsonDocument.Parse(responseContent);
+        var root = jsonDoc.RootElement;
+
+        string fileName = root.GetProperty("img").GetString();
+        videoUrl = "http://localhost:5050/uploads/InventarioEquipos/" + fileName;
+        Console.WriteLine(videoUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Video subido con éxito.");
+        }
+        else
+        {
+            Console.WriteLine("Error al subir el video.");
+        }
+    }
+
+    // Métodos para la imagen
+    private async Task AbrirInputFileImagen()
+    {
+        await JS.InvokeVoidAsync("abrirInputFile", "inputImagen");
+    }
+
+    private async Task OnInputFileChangeImagen(InputFileChangeEventArgs e)
+    {
+        ArchivoImagen = e.File;
+        NombreArchivoImagen = ArchivoImagen.Name;
+        StateHasChanged();
+    }
+
+    private async Task GuardarImagen()
+    {
+        if (ArchivoImagen == null)
+            return;
+
+        var formData = new MultipartFormDataContent();
+        var streamContent = new StreamContent(ArchivoImagen.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024)); // 10 MB
+
+        streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(ArchivoImagen.ContentType);
+        formData.Add(streamContent, "file", ArchivoImagen.Name);
+
+        // Cambia esta URL por la tuya (puede ser la misma o diferente)
+        var url = "http://localhost:5050/api/file/file/InventarioEquiposComputo/SW52ZW50YXJpb0VxdXBvc2RlQ29tcHV0bw===&RGVzYXJvbGluZw==&UmFpei==&SW1hZ2VuRXh0ZW5zaW9u";
+
+        var response = await Http.PutAsync(url, formData);
+        var responseContent = await response.Content.ReadAsStringAsync();
+        var jsonDoc = JsonDocument.Parse(responseContent);
+        var root = jsonDoc.RootElement;
+
+        string fileName = root.GetProperty("img").GetString();
+        imagenUrl = "http://localhost:5050/uploads/InventarioEquipos/" + fileName;
+        Console.WriteLine(imagenUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Imagen subida con éxito.");
+        }
+        else
+        {
+            Console.WriteLine("Error al subir la imagen.");
+        }
+    }
 }
+
+<script>
+    window.abrirInputFile = (inputId) => {
+        document.getElementById(inputId).click();
+    };
+</script>

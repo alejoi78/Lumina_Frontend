@@ -7,19 +7,19 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-// Configuración del HttpClient para apuntar a tu backend
+// Configuración del HttpClient (cambia a HTTPS)
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("http://localhost:5950") // Asegúrate que coincide con tu backend
+    BaseAddress = new Uri("https://localhost:5950") // Cambiado a HTTPS
 });
 
-// Si usas HttpClientFactory (recomendado para servicios)
+// Configuración HttpClientFactory (recomendado)
 builder.Services.AddHttpClient("BackendAPI", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5950");
+    client.BaseAddress = new Uri("https://localhost:5950"); // Cambiado a HTTPS
 });
 
-// Registro de tus servicios
+// Registro de servicios
 builder.Services.AddScoped<SerieNegocio>();
 builder.Services.AddScoped<PeliculaNegocio>();
 builder.Services.AddScoped<LoginNegocio>();
