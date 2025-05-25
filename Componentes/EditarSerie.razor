@@ -1,137 +1,187 @@
 ﻿@using BlazorWeb.Entidades
 @using BlazorWeb.Negocio
 @inject SerieNegocio SerieServicio
+@inject NavigationManager NavigationManager
 
 <h1>Editar Serie</h1>
 
-<EditForm Model="@serieEditar" OnValidSubmit="@ActualizarSerie">
+<EditForm Model="@serieActual" OnValidSubmit="@GuardarSerie">
     <DataAnnotationsValidator />
     <ValidationSummary />
 
     <div class="form-group">
+        <label for="idSerie">ID Serie: </label>
+        <InputNumber id="idSerie" @bind-Value="serieActual.IdSerie" class="form-control" disabled />
+    </div>
+
+    <div class="form-group">
         <div>
             <label for="titulo">Título: </label>
-            <InputText id="titulo" @bind-Value="serieEditar.Titulo" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.Titulo)" />
+            <InputText id="titulo" @bind-Value="serieActual.Titulo" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Titulo)" />
         </div>
 
         <div>
             <label for="director">Director: </label>
-            <InputText id="director" @bind-Value="serieEditar.Director" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.Director)" />
+            <InputText id="director" @bind-Value="serieActual.Director" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Director)" />
         </div>
 
         <div>
             <label for="anio">Año: </label>
-            <InputNumber id="anio" @bind-Value="serieEditar.Anio" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.Anio)" />
+            <InputNumber id="anio" @bind-Value="serieActual.Anio" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Anio)" />
         </div>
 
         <div>
             <label for="link">Enlace (Link): </label>
-            <InputText id="link" @bind-Value="serieEditar.Link" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.Link)" />
+            <InputText id="link" @bind-Value="serieActual.Link" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Link)" />
         </div>
 
         <div>
             <label for="temporadas">Temporadas: </label>
-            <InputNumber id="temporadas" @bind-Value="serieEditar.Temporadas" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.Temporadas)" />
+            <InputNumber id="temporadas" @bind-Value="serieActual.Temporadas" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Temporadas)" />
         </div>
 
         <div>
-            <label for="duracionPorCapitulo">Duración por capítulo (min): </label>
-            <InputNumber id="duracionPorCapitulo" @bind-Value="serieEditar.DuracionPorCapitulo" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.DuracionPorCapitulo)" />
+            <label for="duracionPorCapitulo">Duración por capítulo (minutos): </label>
+            <InputNumber id="duracionPorCapitulo" @bind-Value="serieActual.DuracionPorCapitulo" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.DuracionPorCapitulo)" />
         </div>
 
         <div>
             <label for="genero">Género: </label>
-            <InputText id="genero" @bind-Value="serieEditar.Genero" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.Genero)" />
+            <InputText id="genero" @bind-Value="serieActual.Genero" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Genero)" />
         </div>
 
         <div>
             <label for="calificacion">Calificación: </label>
-            <InputNumber id="calificacion" @bind-Value="serieEditar.Calificacion" class="form-control" step="0.1" />
-            <ValidationMessage For="@(() => serieEditar.Calificacion)" />
+            <InputNumber id="calificacion" @bind-Value="serieActual.Calificacion" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => serieActual.Calificacion)" />
         </div>
 
         <div>
-            <label for="imagen">Imagen: </label>
-            <InputText id="imagen" @bind-Value="serieEditar.Imagen" class="form-control" />
-            <ValidationMessage For="@(() => serieEditar.Imagen)" />
+            <label for="imagen">Imagen (URL): </label>
+            <InputText id="imagen" @bind-Value="serieActual.Imagen" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Imagen)" />
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <h3>Episodios</h3>
+    <div class="mb-3">
+        <button type="button" class="btn btn-secondary" @onclick="AgregarEpisodio">
+            Agregar Episodio
+        </button>
+    </div>
+
+    <div class="episodes-container">
+        @for (int i = 0; i < serieActual.Episodios.Count; i++)
+        {
+            var index = i;
+            <div class="card mb-3">
+                <div class="card-header d-flex justify-content-between">
+                    <h5>Episodio @(index + 1)</h5>
+                    <button type="button" class="btn btn-danger btn-sm" @onclick="() => EliminarEpisodio(index)">
+                        Eliminar
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="@($"nombre-{index}")">Nombre: </label>
+                        <InputText id="@($"nombre-{index}")" @bind-Value="serieActual.Episodios[index].Nombre" class="form-control" />
+                        <ValidationMessage For="@(() => serieActual.Episodios[index].Nombre)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="@($"temporada-{index}")">Temporada: </label>
+                        <InputText id="@($"temporada-{index}")" @bind-Value="serieActual.Episodios[index].Temporada" class="form-control" />
+                        <ValidationMessage For="@(() => serieActual.Episodios[index].Temporada)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="@($"link-{index}")">Enlace: </label>
+                        <InputText id="@($"link-{index}")" @bind-Value="serieActual.Episodios[index].Link" class="form-control" />
+                        <ValidationMessage For="@(() => serieActual.Episodios[index].Link)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="@($"duracion-{index}")">Duración (minutos): </label>
+                        <InputNumber id="@($"duracion-{index}")" @bind-Value="serieActual.Episodios[index].DuracionMin" class="form-control" />
+                        <ValidationMessage For="@(() => serieActual.Episodios[index].DuracionMin)" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <button type="button" class="btn btn-secondary ml-2" @onclick="Cancelar">Cancelar</button>
+    </div>
 </EditForm>
 
 @if (!string.IsNullOrEmpty(resultado))
 {
     <div class="alert alert-info mt-3">@resultado</div>
-    <div class="mt-3">
-        <h4>Datos actualizados:</h4>
-        <p><strong>Título:</strong> @serieEditar.Titulo</p>
-        <p><strong>Director:</strong> @serieEditar.Director</p>
-        <p><strong>Año:</strong> @serieEditar.Anio</p>
-        <p><strong>Enlace:</strong> @serieEditar.Link</p>
-        <p><strong>Temporadas:</strong> @serieEditar.Temporadas</p>
-        <p><strong>Duración por capítulo:</strong> @serieEditar.DuracionPorCapitulo min</p>
-        <p><strong>Género:</strong> @serieEditar.Genero</p>
-        <p><strong>Calificación:</strong> @serieEditar.Calificacion</p>
-        <p><strong>Imagen:</strong> @serieEditar.Imagen</p>
-    </div>
 }
 
 @code {
     [Parameter]
-    public int Data { get; set; }
+    public int SerieId { get; set; }
 
     [Parameter]
     public EventCallback OnSerieActualizada { get; set; }
 
-    private Serie serieEditar = new Serie();
+    private Serie serieActual = new Serie { Episodios = new List<Episodio>() };
     private string resultado = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
-        var series = await SerieServicio.listarSeries();
-        var serieExistente = series.FirstOrDefault(s => s.IdSerie == Data);
-
-        if (serieExistente != null)
-        {
-            serieEditar = new Serie
-                {
-                    IdSerie = Data,
-                    Titulo = serieExistente.Titulo,
-                    Director = serieExistente.Director,
-                    Anio = serieExistente.Anio,
-                    Link = serieExistente.Link,
-                    Temporadas = serieExistente.Temporadas,
-                    DuracionPorCapitulo = serieExistente.DuracionPorCapitulo,
-                    Genero = serieExistente.Genero,
-                    Calificacion = serieExistente.Calificacion,
-                    Imagen = serieExistente.Imagen
-                };
-        }
+        serieActual = await SerieServicio.obtenerPorId(SerieId) ?? new Serie();
+        serieActual.Episodios ??= new List<Episodio>();
     }
 
-    private async Task ActualizarSerie()
+    private void AgregarEpisodio()
+    {
+        serieActual.Episodios.Add(new Episodio());
+    }
+
+    private void EliminarEpisodio(int index)
+    {
+        serieActual.Episodios.RemoveAt(index);
+    }
+
+    private async Task GuardarSerie()
     {
         try
         {
-            bool actualizado = await SerieServicio.actualizarSeries(serieEditar);
+            // Asignar el ID de serie a todos los episodios
+            foreach (var episodio in serieActual.Episodios)
+            {
+                episodio.IdSerie = serieActual.IdSerie;
+            }
+
+            bool actualizado = await SerieServicio.actualizarSeries(serieActual);
             resultado = actualizado ? "Serie actualizada correctamente" : "Error al actualizar";
 
             if (actualizado)
             {
-                await OnSerieActualizada.InvokeAsync(null);
+                await OnSerieActualizada.InvokeAsync();
+                await Task.Delay(1500);
+                NavigationManager.NavigateTo("/series");
             }
         }
         catch (Exception ex)
         {
             resultado = $"Error: {ex.Message}";
         }
+    }
+
+    private void Cancelar()
+    {
+        NavigationManager.NavigateTo("/series");
     }
 }

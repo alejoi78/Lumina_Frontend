@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qgjdqos7ho</Fingerprint>
-      <Integrity>NiIC6eUBya+HPOTypWtk29MA5IsOQl9VRSksQ78eoME=</Integrity>
+      <Fingerprint>ba75dskz6o</Fingerprint>
+      <Integrity>I9Ewbgi0xqs5lhAMVB/k0IrGoRgbOMCHL+kuMQ05OhQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\app.css'))</OriginalItemSpec>
@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pl5p4o7iev</Fingerprint>
-      <Integrity>nbxLgCn8QjAwJfMZXOUg+tlZf8g530eFxF/9rCM0hLE=</Integrity>
+      <Fingerprint>a1xcmb3kq4</Fingerprint>
+      <Integrity>wruJlQBeBVeeTSdQ94b9JRGNer4oU6dWjPlbD6TSYy0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\video-js.css'))</OriginalItemSpec>

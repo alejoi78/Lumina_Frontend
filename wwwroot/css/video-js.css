@@ -1237,15 +1237,6 @@ body.vjs-full-window {
     display: block;
 }
 
-video::-webkit-media-text-track-display {
-    -webkit-transform: translateY(-3em);
-    transform: translateY(-3em);
-}
-
-.video-js.vjs-user-inactive.vjs-playing video::-webkit-media-text-track-display {
-    -webkit-transform: translateY(-1.5em);
-    transform: translateY(-1.5em);
-}
 
 .video-js .vjs-fullscreen-control {
     cursor: pointer;

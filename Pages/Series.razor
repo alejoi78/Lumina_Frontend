@@ -73,7 +73,7 @@
             <div class="card-body">
                 @if (esEdicion)
                 {
-                    <EditarSerie Data="@serieClickeada" OnSerieActualizada="CargarSeries" />
+                    <EditarSerie SerieId="@serieClickeada" OnSerieActualizada="CargarSeries" />
                 }
                 else
                 {
@@ -89,7 +89,6 @@
     private List<Serie> series = new List<Serie>();
     private Serie nuevaSerie = new Serie();
     private bool esEdicion = false;
-    private int idSerieEditar;
     private int serieClickeada;
 
     protected override async Task OnInitializedAsync()

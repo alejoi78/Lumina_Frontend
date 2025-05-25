@@ -2,6 +2,7 @@
     outline: 1px solid #26b050;
 }
 
+
 .invalid {
     outline: 1px solid red;
 }
@@ -154,26 +155,26 @@ code {
     border-radius: 8px;
 }
 
-.login-info-content img {
-    width: 100%;
-    max-width: 300px; /* Controla el tamaño máximo de la imagen */
-    height: auto;
-    margin-bottom: 1.5rem;
-    border-radius: 8px; /* Opcional: bordes redondeados */
-    object-fit: contain; /* Asegura que la imagen no se distorsione */
-}
+    .login-info-content img {
+        width: 100%;
+        max-width: 300px; /* Controla el tama?o m?ximo de la imagen */
+        height: auto;
+        margin-bottom: 1.5rem;
+        border-radius: 8px; /* Opcional: bordes redondeados */
+        object-fit: contain; /* Asegura que la imagen no se distorsione */
+    }
 
-.login-info-content h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
+    .login-info-content h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
 
-.login-info-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.8);
-}
+    .login-info-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.8);
+    }
 
 .fm-video {
     width: 100%;
@@ -227,6 +228,155 @@ article {
         margin-bottom: 20px;
     }
 
+.content-card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.content-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+    .content-card:hover .content-card-inner {
+        transform: scale(1.03);
+    }
+
+.content-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-poster-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.content-year {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.content-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 119, 182, 0.8);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+}
+
+.content-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 119, 182, 0.7);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.content-card:hover .content-card-overlay {
+    opacity: 1;
+}
+
+.content-info-hover {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.content-title-hover {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.content-year-hover {
+    color: #ddd;
+    font-size: 0.8rem;
+    margin-top: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.play-icon {
+    font-size: 2rem;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.content-card:hover .play-icon {
+    transform: scale(1.2);
+}
+
+.content-type {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+
+    .content-type i {
+        margin-right: 5px;
+    }
+
+.c-item {
+    height: 500px;
+}
+
+.c-img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
 @media screen and (max-width: 600px) {
     header {
         position: relative;
@@ -238,8 +388,8 @@ article {
     }
 }
 
-/* Media queries para diferentes tamaños */
-@@media (max-width: 992px) {
+/* Media queries para diferentes tama?os */
+@media (max-width: 992px) {
     .login-form {
         padding: 1.5rem;
     }
@@ -249,7 +399,7 @@ article {
     }
 }
 
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
     .login-wrapper {
         max-width: 500px;
     }
@@ -259,7 +409,9 @@ article {
     }
 }
 
-@@media (max-width: 576px) {
+
+
+@media (max-width: 576px) {
     .login-form {
         padding: 1rem;
     }
@@ -268,6 +420,3 @@ article {
         font-size: 1.25rem;
     }
 }
-
-
-

@@ -194,7 +194,7 @@
         await JS.InvokeVoidAsync("abrirInputFile", "inputVideo");
     }
 
-    private async Task OnInputFileChangeVideo(InputFileChangeEventArgs e)
+    private void OnInputFileChangeVideo(InputFileChangeEventArgs e)
     {
         ArchivoVideo = e.File;
         NombreArchivoVideo = ArchivoVideo.Name;
@@ -239,7 +239,7 @@
         await JS.InvokeVoidAsync("abrirInputFile", "inputImagen");
     }
 
-    private async Task OnInputFileChangeImagen(InputFileChangeEventArgs e)
+    private void OnInputFileChangeImagen(InputFileChangeEventArgs e)
     {
         ArchivoImagen = e.File;
         NombreArchivoImagen = ArchivoImagen.Name;

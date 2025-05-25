@@ -2,105 +2,240 @@
 @using BlazorWeb.Negocio
 @inject SerieNegocio SerieServicio
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+@inject HttpClient Http
+@using System.Text.Json;
 
-<h1>Nueva Serie</h1>
+<h1>@TituloPagina</h1>
 
-<EditForm Model="@nuevaSerie" OnValidSubmit="@guardarSerie">
+<EditForm Model="@serieActual" OnValidSubmit="@GuardarSerie">
     <DataAnnotationsValidator />
     <ValidationSummary />
+
+    @if (ModoEdicion)
+    {
+        <div class="form-group">
+            <label for="idSerie">ID Serie: </label>
+            <InputNumber id="idSerie" @bind-Value="serieActual.IdSerie" class="form-control" disabled />
+        </div>
+    }
 
     <div class="form-group">
         <div>
             <label for="titulo">Título: </label>
-            <InputText id="titulo" @bind-Value="nuevaSerie.Titulo" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.Titulo)" />
+            <InputText id="titulo" @bind-Value="serieActual.Titulo" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Titulo)" />
         </div>
 
         <div>
             <label for="director">Director: </label>
-            <InputText id="director" @bind-Value="nuevaSerie.Director" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.Director)" />
+            <InputText id="director" @bind-Value="serieActual.Director" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Director)" />
         </div>
 
         <div>
             <label for="anio">Año: </label>
-            <InputNumber id="anio" @bind-Value="nuevaSerie.Anio" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.Anio)" />
-        </div>
-
-        <div>
-            <label for="link">Enlace (Link): </label>
-            <InputText id="link" @bind-Value="nuevaSerie.Link" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.Link)" />
+            <InputNumber id="anio" @bind-Value="serieActual.Anio" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Anio)" />
         </div>
 
         <div>
             <label for="temporadas">Temporadas: </label>
-            <InputNumber id="temporadas" @bind-Value="nuevaSerie.Temporadas" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.Temporadas)" />
+            <InputNumber id="temporadas" @bind-Value="serieActual.Temporadas" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Temporadas)" />
         </div>
 
         <div>
             <label for="duracionPorCapitulo">Duración por capítulo (minutos): </label>
-            <InputNumber id="duracionPorCapitulo" @bind-Value="nuevaSerie.DuracionPorCapitulo" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.DuracionPorCapitulo)" />
+            <InputNumber id="duracionPorCapitulo" @bind-Value="serieActual.DuracionPorCapitulo" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.DuracionPorCapitulo)" />
         </div>
 
         <div>
             <label for="genero">Género: </label>
-            <InputText id="genero" @bind-Value="nuevaSerie.Genero" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.Genero)" />
+            <InputText id="genero" @bind-Value="serieActual.Genero" class="form-control" />
+            <ValidationMessage For="@(() => serieActual.Genero)" />
         </div>
 
         <div>
             <label for="calificacion">Calificación: </label>
-            <InputNumber id="calificacion" @bind-Value="nuevaSerie.Calificacion" class="form-control" step="0.1" />
-            <ValidationMessage For="@(() => nuevaSerie.Calificacion)" />
+            <InputNumber id="calificacion" @bind-Value="serieActual.Calificacion" class="form-control" step="0.1" />
+            <ValidationMessage For="@(() => serieActual.Calificacion)" />
         </div>
 
-        <div>
-            <label for="imagen">Imagen: </label>
-            <InputText id="imagen" @bind-Value="nuevaSerie.Imagen" class="form-control" />
-            <ValidationMessage For="@(() => nuevaSerie.Imagen)" />
+        <InputFile id="inputImagen" style="display:none" OnChange="OnInputFileChangeImagen" accept="image/*" />
+        <div class="mb-3 mt-3">
+            <label>Imagen: </label>
+            <button type="button" class="btn btn-outline-secondary" @onclick="AbrirInputFileImagen">
+                Seleccionar imagen
+            </button>
+            @if (!string.IsNullOrEmpty(NombreArchivoImagen))
+            {
+                <span class="ml-2">@NombreArchivoImagen</span>
+            }
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <h3>Episodios</h3>
+    <div class="mb-3">
+        <button type="button" class="btn btn-secondary" @onclick="AgregarEpisodio">
+            Agregar Episodio
+        </button>
+    </div>
+
+    <div class="episodes-container">
+        @for (int i = 0; i < serieActual.Episodios.Count; i++)
+        {
+            var index = i;
+            var episodio = serieActual.Episodios[index];
+
+            <div class="card mb-3">
+                <div class="card-header d-flex justify-content-between">
+                    <h5>Episodio @(index + 1)</h5>
+                    <button type="button" class="btn btn-danger btn-sm" @onclick="() => EliminarEpisodio(index)">
+                        Eliminar
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="@($"nombre-{index}")">Nombre: </label>
+                        <InputText id="@($"nombre-{index}")" @bind-Value="episodio.Nombre" class="form-control" />
+                        <ValidationMessage For="@(() => episodio.Nombre)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="@($"temporada-{index}")">Temporada: </label>
+                        <InputText id="@($"temporada-{index}")" @bind-Value="episodio.Temporada" class="form-control" />
+                        <ValidationMessage For="@(() => episodio.Temporada)" />
+                    </div>
+
+                    <!-- Input para video del episodio (oculto) -->
+                    <InputFile id="@($"inputVideo-{index}")" style="display:none"
+                               OnChange="@(e => OnInputFileChangeVideo(e, index))"
+                               accept="video/*" />
+
+                    <div class="form-group">
+                        <label class="mt-3">Video del Episodio: </label>
+                        <button type="button" class="btn btn-outline-secondary"
+                                @onclick="@(() => AbrirInputFileVideo(index))">
+                            Seleccionar video
+                        </button>
+                        @if (!string.IsNullOrEmpty(episodio.NombreArchivoVideo))
+                        {
+                            <span class="ml-2">@episodio.NombreArchivoVideo</span>
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <label for="@($"duracion-{index}")">Duración (minutos): </label>
+                        <InputNumber id="@($"duracion-{index}")" @bind-Value="episodio.DuracionMin" class="form-control" />
+                        <ValidationMessage For="@(() => episodio.DuracionMin)" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">@BotonGuardarTexto</button>
+        <button type="button" class="btn btn-secondary ml-2" @onclick="Cancelar">Cancelar</button>
+    </div>
 </EditForm>
 
 @if (!string.IsNullOrEmpty(resultado))
 {
     <div class="alert alert-info mt-3">@resultado</div>
-    <p>@nuevaSerie.Titulo</p>
-    <p>@nuevaSerie.Director</p>
-    <p>@nuevaSerie.Anio</p>
-    <p>@nuevaSerie.Link</p>
-    <p>@nuevaSerie.Temporadas</p>
-    <p>@nuevaSerie.DuracionPorCapitulo</p>
-    <p>@nuevaSerie.Genero</p>
-    <p>@nuevaSerie.Calificacion</p>
-    <p>@nuevaSerie.Imagen</p>
 }
 
 @code {
     [Parameter]
-    public EventCallback OnSerieCreada { get; set; }  // Parámetro para comunicación con el padre
+    public EventCallback OnSerieCreada { get; set; }
 
-    private Serie nuevaSerie = new Serie();
+    [Parameter]
+    public int? SerieId { get; set; }
+
+    // Variables para la imagen
+    private IBrowserFile ArchivoImagen;
+    private string NombreArchivoImagen = string.Empty;
+    private string imagenUrl = "";
+
+    private Serie serieActual = new Serie { Episodios = new List<Episodio>() };
     private string resultado = string.Empty;
+    private bool ModoEdicion => SerieId.HasValue;
+    private string TituloPagina => ModoEdicion ? "Editar Serie" : "Nueva Serie";
+    private string BotonGuardarTexto => ModoEdicion ? "Actualizar" : "Guardar";
 
-    private async Task guardarSerie()
+    // Diccionario para almacenar archivos de video temporalmente
+    private Dictionary<int, IBrowserFile> archivosVideosEpisodios = new Dictionary<int, IBrowserFile>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (ModoEdicion)
+        {
+            // Cargar la serie existente para edición
+            serieActual = await SerieServicio.obtenerPorId(SerieId.Value) ?? new Serie();
+            if (serieActual.Episodios == null)
+            {
+                serieActual.Episodios = new List<Episodio>();
+            }
+        }
+    }
+
+    private void AgregarEpisodio()
+    {
+        serieActual.Episodios.Add(new Episodio());
+    }
+
+    private void EliminarEpisodio(int index)
+    {
+        serieActual.Episodios.RemoveAt(index);
+        // También eliminamos el archivo de video asociado si existe
+        if (archivosVideosEpisodios.ContainsKey(index))
+        {
+            archivosVideosEpisodios.Remove(index);
+        }
+    }
+
+    private async Task GuardarSerie()
     {
         try
         {
-            bool guardado = await SerieServicio.guardarSerie(nuevaSerie);
-            resultado = guardado ? "Serie guardada correctamente" : "Error al guardar";
+            bool resultadoOperacion;
 
-            if (guardado)
+            // Subir imagen de la serie
+            await GuardarImagen();
+            if (!string.IsNullOrEmpty(imagenUrl))
             {
-                await OnSerieCreada.InvokeAsync(); // Notifica al padre para recargar la lista
+                serieActual.Imagen = imagenUrl;
+            }
+
+            // Subir videos de los episodios
+            await SubirVideosEpisodios();
+
+            if (ModoEdicion)
+            {
+                // Asignar el ID de serie a todos los episodios
+                foreach (var episodio in serieActual.Episodios)
+                {
+                    episodio.IdSerie = serieActual.IdSerie;
+                }
+
+                resultadoOperacion = await SerieServicio.actualizarSeries(serieActual);
+                resultado = resultadoOperacion ? "Serie actualizada correctamente" : "Error al actualizar";
+            }
+            else
+            {
+                serieActual.Link = "https://localhost:7133/";
+                resultadoOperacion = await SerieServicio.guardarSerie(serieActual);
+                resultado = resultadoOperacion ? "Serie guardada correctamente" : "Error al guardar";
+            }
+
+            if (resultadoOperacion)
+            {
+                await OnSerieCreada.InvokeAsync();
                 await Task.Delay(1500);
                 NavigationManager.NavigateTo("/series");
+                serieActual = new Serie { Episodios = new List<Episodio>() };
             }
         }
         catch (Exception ex)
@@ -108,4 +243,134 @@
             resultado = $"Error: {ex.Message}";
         }
     }
+
+    // Métodos para la imagen
+    private async Task AbrirInputFileImagen()
+    {
+        await JS.InvokeVoidAsync("abrirInputFile", "inputImagen");
+    }
+
+    private async Task OnInputFileChangeImagen(InputFileChangeEventArgs e)
+    {
+        ArchivoImagen = e.File;
+        NombreArchivoImagen = ArchivoImagen.Name;
+        StateHasChanged();
+    }
+
+    private async Task GuardarImagen()
+    {
+        if (ArchivoImagen == null)
+            return;
+
+        var formData = new MultipartFormDataContent();
+        var streamContent = new StreamContent(ArchivoImagen.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024)); // 10 MB
+
+        streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(ArchivoImagen.ContentType);
+        formData.Add(streamContent, "file", ArchivoImagen.Name);
+
+        var url = "http://localhost:5050/api/file/file/InventarioEquiposComputo/SW52ZW50YXJpb0VxdXBvc2RlQ29tcHV0bw===&RGVzYXJvbGluZw==&UmFpei==&SW1hZ2VuRXh0ZW5zaW9u";
+
+        var response = await Http.PutAsync(url, formData);
+        var responseContent = await response.Content.ReadAsStringAsync();
+        var jsonDoc = JsonDocument.Parse(responseContent);
+        var root = jsonDoc.RootElement;
+
+        string fileName = root.GetProperty("img").GetString();
+        imagenUrl = "http://localhost:5050/uploads/InventarioEquipos/" + fileName;
+        Console.WriteLine(imagenUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Imagen subida con éxito.");
+        }
+        else
+        {
+            Console.WriteLine("Error al subir la imagen.");
+        }
+    }
+
+    // Métodos para los videos de los episodios
+    private async Task AbrirInputFileVideo(int index)
+    {
+        await JS.InvokeVoidAsync("abrirInputFile", $"inputVideo-{index}");
+    }
+
+    private async Task OnInputFileChangeVideo(InputFileChangeEventArgs e, int index)
+    {
+        if (index >= 0 && index < serieActual.Episodios.Count)
+        {
+            var episodio = serieActual.Episodios[index];
+            var archivoVideo = e.File;
+
+            // Almacenamos temporalmente el archivo
+            archivosVideosEpisodios[index] = archivoVideo;
+
+            // Actualizamos el nombre del archivo en el episodio
+            episodio.NombreArchivoVideo = archivoVideo.Name;
+
+            StateHasChanged();
+        }
+    }
+
+    private async Task SubirVideosEpisodios()
+    {
+        foreach (var kvp in archivosVideosEpisodios)
+        {
+            int index = kvp.Key;
+            IBrowserFile archivoVideo = kvp.Value;
+
+            if (index >= 0 && index < serieActual.Episodios.Count && archivoVideo != null)
+            {
+                var episodio = serieActual.Episodios[index];
+                var videoUrl = await SubirVideo(archivoVideo);
+
+                if (!string.IsNullOrEmpty(videoUrl))
+                {
+                    episodio.Link = videoUrl;
+                }
+            }
+        }
+    }
+
+    private async Task<string> SubirVideo(IBrowserFile archivoVideo)
+    {
+        var formData = new MultipartFormDataContent();
+        var streamContent = new StreamContent(archivoVideo.OpenReadStream(maxAllowedSize: 150 * 1024 * 1024)); // 150 MB
+
+        streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(archivoVideo.ContentType);
+        formData.Add(streamContent, "file", archivoVideo.Name);
+
+        var url = "http://localhost:5050/api/file/file/InventarioEquiposComputo/SW52ZW50YXJpb0VxdXBvc2RlQ29tcHV0bw===&RGVzYXJvbGluZw==&UmFpei==&SW1hZ2VuRXh0ZW5zaW9u";
+
+        var response = await Http.PutAsync(url, formData);
+        var responseContent = await response.Content.ReadAsStringAsync();
+        var jsonDoc = JsonDocument.Parse(responseContent);
+        var root = jsonDoc.RootElement;
+
+        string fileName = root.GetProperty("img").GetString();
+        string videoUrl = "http://localhost:5050/uploads/InventarioEquipos/" + fileName;
+        Console.WriteLine(videoUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Video subido con éxito.");
+            return videoUrl;
+        }
+        else
+        {
+            Console.WriteLine("Error al subir el video.");
+            return null;
+        }
+    }
+
+    private void Cancelar()
+    {
+        NavigationManager.NavigateTo("/series");
+    }
 }
+
+<script>
+    window.abrirInputFile = (inputId) => {
+        document.getElementById(inputId).click();
+    };
+</script>

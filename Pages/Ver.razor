@@ -15,7 +15,6 @@ else
 {
     <div class="container mt-4 mb-4">
         <div class="card border-0 bg-transparent">
-            <!-- Video Player -->
             <div class="card-header bg-dark text-white">
                 <h3 class="card-title mb-0">@contenido.Titulo (@contenido.Anio)</h3>
             </div>
@@ -23,25 +22,30 @@ else
             <div class="card-body" style="background: black">
                 <div class="row">
                     <!-- Video Section -->
-                    @if (!string.IsNullOrEmpty(contenido.Link))
-                    {
-                        <div class="col-lg-8 mb-3">
-                            <div class="ratio ratio-16x9">
-                                <video id="fm-video" controls class="w-100">
-                                    <source src="@contenido.Link" type="video/mp4">
-                                    Tu navegador no soporta el elemento de video.
-                                </video>
-                            </div>
+                    <div class="col-lg-8 mb-3">
+                        <div class="ratio ratio-16x9">
+                            <video id="fm-video" controls class="w-100">
+                                <source src="@videoActual" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
                         </div>
-                    }
-                    else
-                    {
-                        <div class="col-lg-8 mb-3">
-                            <div class="alert alert-warning mb-0">
-                                No hay video disponible para este contenido
+
+                        @if (!contenido.EsPelicula && contenido.Episodios?.Any() == true)
+                        {
+                            <div class="mt-3">
+                                <h5 class="text-white">Episodios</h5>
+                                <ul class="list-group">
+                                    @foreach (var ep in contenido.Episodios)
+                                    {
+                                        <li class="list-group-item list-group-item-action @(ep.Link == videoActual ? "active" : "")"
+                                            @onclick="@(() => CambiarEpisodio(ep.Link))" style="cursor: pointer;">
+                                            Temporada @ep.Temporada - @ep.Nombre
+                                        </li>
+                                    }
+                                </ul>
                             </div>
-                        </div>
-                    }
+                        }
+                    </div>
 
                     <!-- Info Section -->
                     <div class="col-lg-4">
@@ -55,7 +59,7 @@ else
                                 <h5 class="card-title">Información</h5>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item py-2">
-                                        <strong>Tipo:</strong> @(contenido.EsPelicula ? "Película" : "Serie")   
+                                        <strong>Tipo:</strong> @(contenido.EsPelicula ? "Película" : "Serie")
                                     </li>
                                     @if (!contenido.EsPelicula)
                                     {
@@ -93,9 +97,10 @@ else
     public int id { get; set; }
 
     [Parameter]
-    public string tipo { get; set; } // "pelicula" o "serie"
+    public string tipo { get; set; }
 
     private Contenido contenido;
+    private string videoActual;
 
     protected override async Task OnInitializedAsync()
     {
@@ -113,8 +118,9 @@ else
                     Director = peli.Director,
                     Genero = peli.Genero,
                     DuracionHoras = peli.DuracionHoras,
-                    Calificacion = peli.Calificacion,
+                    Calificacion = peli.Calificacion
                 };
+            videoActual = contenido.Link;
         }
         else if (tipo == "serie")
         {
@@ -131,19 +137,22 @@ else
                     Director = serie.Director,
                     Genero = serie.Genero,
                     Calificacion = serie.Calificacion,
+                    Episodios = serie.Episodios
                 };
+
+            videoActual = contenido.Episodios?.FirstOrDefault()?.Link ?? "";
         }
 
         await InvokeAsync(StateHasChanged);
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    private async void CambiarEpisodio(string link)
     {
-        if (firstRender && !string.IsNullOrEmpty(contenido?.Link))
-        {
-            await JS.InvokeVoidAsync("initVideoPlayer");
-        }
+        videoActual = link;
+        await JS.InvokeVoidAsync("recargarVideo");
+        StateHasChanged();
     }
+
 
     private class Contenido
     {
@@ -158,6 +167,7 @@ else
         public string Genero { get; set; }
         public double DuracionHoras { get; set; }
         public double Calificacion { get; set; }
+        public List<Episodio> Episodios { get; set; } = new();
     }
 }
 
@@ -178,5 +188,14 @@ else
             controls: true,
             playbackRates: [0.5, 1, 1.5, 2]
         });
+    }
+
+     function recargarVideo() {
+        var video = document.getElementById("fm-video");
+        if (video) {
+            video.pause();
+            video.load();
+            video.play();
+        }
     }
 </script>

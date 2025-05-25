@@ -3175,6 +3175,6 @@ C:\Users\user\Source\Repos\Lumina_Frontend\obj\Debug\net8.0\ref\BlazorWeb.dll
 C:\Users\user\Source\Repos\Lumina_Frontend\obj\Debug\net8.0\compressed\q6uywdz1gh-prp1ejwcfp.gz
 C:\Users\user\Source\Repos\Lumina_Frontend\obj\Debug\net8.0\compressed\9slgmvyey4-8kfpzd0i1b.gz
 C:\Users\user\Source\Repos\Lumina_Frontend\obj\Debug\net8.0\compressed\gj9psvzcp1-jhobv1fqns.gz
-C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\q6uywdz1gh-w8kgrcqgm7.gz
-C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\9slgmvyey4-be2pnlocqg.gz
-C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\gj9psvzcp1-6q26jwpxj1.gz
+C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\q6uywdz1gh-vz0rn5okn0.gz
+C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\9slgmvyey4-7vq329sv1x.gz
+C:\Users\Alejo\Desktop\Lumina_Frontend\obj\Debug\net8.0\compressed\gj9psvzcp1-tkw3ajfvnq.gz
